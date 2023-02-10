@@ -12,9 +12,18 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     background: beige;
 }
 .login{
-    border: groove;
-    border-color: black ;
-    width: fit-content;
+    background-color: #fff;
+    border: 1px solid #e3e3e3;
+    border-radius: 16px;
+    box-sizing: border-box;
+    font-family: Source Sans Pro;
+    height: 100%;
+    left: 0;
+    padding: 48px;
+    position: relative;
+    text-align: left;
+    top: 0;
+    width: 550px;
 }
 .login1{
     background: white;
@@ -51,4 +60,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     font-size: 20px ;
     color: black;
 }
-
+.email{
+    border: 1px solid #87b0da;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 6px 0;
+    padding: 14px; 
+}
+.pass{
+    border: 1px solid #87b0da;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 6px 0;
+    padding: 14px; 
+}
