@@ -1,8 +1,11 @@
+<%-- 
+    Document   : login
+    Created on : Feb 28, 2023, 8:54:01 PM
+    Author     : tr498
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
--->
 <html>
     <head>
         <title>TODO supply a title</title>
@@ -11,40 +14,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <link rel="stylesheet" href="css/styleindex.css">
         <title>TRUONGBUI HOTEL</title>
     </head>
-    <body class="container" >
-<<<<<<< HEAD
-        <div>
-            <h1>Login</h1>
-        </div>
-
-        <div class="login">
-
-            <div class="login1" >     
-                <div class="chu">
-                    <form action="login" method="POST">
-                        <table  >
-                            <tr >
-                                <td>User name:</td>
-                                <td><input class="email" type="text" name="User"/></td>
-                            </tr>
-                            <tr>
-                                <td>Password:</td><td><input class="pass" type="password" name="Pass"/></td>
-                            </tr>
-                            <tr>
-                                <td></td><td><input class="login2" type="submit" value="Login" style=""/></td>
-                            </tr>
-                        </table>
-                    </form>
-                    <br/>
-                    <a id="google_login" href="/Home/ExternalLogin?type=Google&amp;CampusCode=null">
-                        <img src="/Content/images/bt-login-gg.png" style="border-radius: 4px;" alt="Login with Google">
-                    </a><br/>
-                    <br/>
-                    <a href="" class="pass-forgot">Forgot your password?</a>                   
-                </div>
-            </div> 
-        </div>               
-=======
+<body class="container" >             
         <section>
             <div class="form-box">
                 <div class="form-value">
@@ -73,6 +43,5 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         </section>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
->>>>>>> 90116a233fcc63f08475dfaf38dc9edbe4f69aac
     </body>
 </html>

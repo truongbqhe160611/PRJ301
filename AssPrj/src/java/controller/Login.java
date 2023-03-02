@@ -1,3 +1,5 @@
+package controller;
+
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -28,7 +30,7 @@ public class Login extends HttpServlet{
           if(u.equalsIgnoreCase(a) && p.equalsIgnoreCase(b)) {
               out.println("<h1>Login Successful! " + "</h1>");
           }
-          else resp.sendRedirect("login.html");
+          else resp.sendRedirect("login.jsp");
     }
     
     
