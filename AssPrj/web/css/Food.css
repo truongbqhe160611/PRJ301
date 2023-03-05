@@ -44,10 +44,12 @@ nav a:hover {
 }
 
 section {
-    margin: 20px 0;
+    margin: 20px 30px;
     border: 1px solid #ccc;
     padding: 20px;
     border-radius: 5px;
+    width: 600px;
+    height: 600px
 }
 
 section h2 {
@@ -84,8 +86,6 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px;
-}
-
 #breakfast {
     background-color: #f5deb3;
 }
