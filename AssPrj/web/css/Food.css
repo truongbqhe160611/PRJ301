@@ -11,6 +11,10 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
 }
+h1{
+    text-align: center;
+    font-size: 3em;
+}
 
 .container {
     max-width: 1000px;
@@ -48,7 +52,7 @@ section {
     padding: 20px;
     border-radius: 5px;
     width: 600px;
-    height: 600px
+    height: 650px
 }
 
 section h2 {
@@ -85,6 +89,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px;
+}
 #breakfast {
     background-color: #f5deb3;
 }

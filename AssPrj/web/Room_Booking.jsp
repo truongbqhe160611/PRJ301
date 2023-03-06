@@ -16,7 +16,7 @@
         <section>
             <div class="form-box">
                 <div class="form-value">
-                    <h2>Room Booking</h2>
+                    <h1 style="font-size: 3em;color: #fff;text-align: center;margin: 0 0 20px;">Room Booking</h1>
                     <form class="form">
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="name"><br><br>
@@ -34,10 +34,14 @@
                         <label for="check-out-date">Check-out Date:</label>
                         <input type="date" id="check-out-date" name="check-out-date"><br><br>
 
-                        <input type="submit" value="Book Room">
+                        <input style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer" type="submit" value="Book Room">
                     </form>
                 </div>
             </div>
         </section>
+        <footer style=" background-color: #232f3e; color: #fff; text-align: center; padding: 10px;">
+            <p>© 2023 Hotel Management</p>
+        </footer>
     </body>
 </html>
+

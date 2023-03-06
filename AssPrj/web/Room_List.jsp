@@ -14,40 +14,42 @@
 
     </head>
     <body>
-        <h1>Rooms List</h1>
+        <h1 style=" text-align: center;font-size: 3em">Rooms List</h1>
         <div>
-            <div>
-                <div>
-                    <img src="css/img/Login.jpg"style="width: 100%;height:500px">
-                </div>
+            <div class="form-box">
                 <div>
                     <h2>Single Room</h2>
+                    <img src="css/img/Login.jpg"style="width: 100%;height:540px">
+                </div>
+                <div>                   
                     <p>Our comfortable single rooms feature a single bed, flat-screen TV, and a private bathroom with a shower.</p>
-                    <p>Price per night: $80</p>
+                    <button style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer;margin: 0 0 10px;">Price per night: $80</button>
                 </div> 
             </div> 
-            <div>
-                <div>
-                    <img src="css/img/Login.jpg" style="width: 100%;height:500px">
-                </div>
+            <div class="form-box">
                 <div>
                     <h2>Double Room</h2>
+                    <img src="css/img/Login.jpg" style="width: 100%;height:540px">
+                </div>
+                <div>                    
                     <p>Our spacious double rooms feature a double bed, flat-screen TV, and a private bathroom with a shower.</p>
-                    <p>Price per night: $120</p>
+                    <button style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer;margin: 0 0 10px;">Price per night: $120</button>
                 </div>
             </div>
-            <div>
+            <div class="form-box">
                 <div>
-                    <img src="css/img/Login.jpg" style="width: 100%;height:500px">
+                    <h2>Suite Room</h2>
+                    <img src="css/img/Login.jpg" style="width: 100%;height:540px">
                 </div>
-                <div>       /
-                    <h2>Family Room</h2>
+                <div>                           
                     <p>Our family rooms feature a double bed and two single beds, flat-screen TV, and a private bathroom with a shower.</p>
-                    <p>Price per night: $160</p>
+                    <button style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer;margin: 0 0 10px;">Price per night: $160</button>
                 </div>
             </div>
-
         </div>
+        <footer style=" background-color: #232f3e; color: #fff; text-align: center; padding: 10px;">
+            <p>© 2023 Hotel Management</p>
+        </footer>
     </body>
 </body>
 </html>
