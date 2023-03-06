@@ -15,14 +15,12 @@
     <body>
         <header>
             <h1>Food Service</h1>        
-            <nav>
-                <ul>
-                    <li><a href="#breakfast">Breakfast</a></li>
-                    <li><a href="#lunch">Lunch</a></li>
-                    <li><a href="#dinner">Dinner</a></li>
-                    <li><a href="#drinks">Drinks</a></li>
-                    <li><a href="#desserts">Desserts</a></li>
-                </ul>
+            <nav>                
+                <a href="#breakfast">Breakfast</a>
+                <a href="#lunch">Lunch</a>
+                <a href="#dinner">Dinner</a>
+                <a href="#drinks">Drinks</a>
+                <a href="#desserts">Desserts</a>             
             </nav>
         </header>
 
@@ -175,7 +173,7 @@
                                 <h3>Chocolate Cake</h3>
                                 <p>Rich chocolate cake with chocolate ganache</p>                               
                                 <button>Price: $6.99</button>
-                                    
+
                             </li>
                             <li>
                                 <h3>Crème Brûlée</h3>

@@ -10,34 +10,54 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-    <style>
-      li {
-        margin: 10px 0;
-        padding: 10px;
-        background-color: #f2f2f2;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-      }
-    </style>
-
+        <link rel="stylesheet" href="css/home.css">
     </head>
-<body>
-    <ul>
-      <li>
-        <h2>Single Room</h2>
-        <p>Our comfortable single rooms feature a single bed, flat-screen TV, and a private bathroom with a shower.</p>
-        <p>Price per night: $80</p>
-      </li>
-      <li>
-        <h2>Double Room</h2>
-        <p>Our spacious double rooms feature a double bed, flat-screen TV, and a private bathroom with a shower.</p>
-        <p>Price per night: $120</p>
-      </li>
-      <li>
-        <h2>Family Room</h2>
-        <p>Our family rooms feature a double bed and two single beds, flat-screen TV, and a private bathroom with a shower.</p>
-        <p>Price per night: $160</p>
-      </li>
-    </ul>
+	<header>
+		<h1>My Store</h1>
+	</header>
+	<main>
+		<h2>Order Confirmation</h2>
+		<!-- Display a table of purchased items with details -->
+		<table>
+			<thead>
+				<tr>
+					<th>Product Name</th>
+					<th>Quantity</th>
+					<th>Price</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Product 1</td>
+					<td>2</td>
+					<td>$19.99</td>
+				</tr>
+				<tr>
+					<td>Product 2</td>
+					<td>1</td>
+					<td>$9.99</td>
+				</tr>
+				<tr>
+					<td>Product 3</td>
+					<td>3</td>
+					<td>$24.99</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="2">Subtotal:</td>
+					<td>$84.96</td>
+				</tr>
+				<tr>
+					<td colspan="2">Shipping:</td>
+					<td>$5.00</td>
+				</tr>
+				<tr>
+					<td colspan="2">Total:</td>
+					<td>$89.96</td>
+				</tr>
+			</tfoot>
+		</table>
+	</main>
 </body>
 </html>

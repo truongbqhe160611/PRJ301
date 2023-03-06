@@ -15,23 +15,39 @@
     </head>
     <body>
         <h1>Rooms List</h1>
-        <ul>
-            <li class="img" src="css/img/Login.jpg" >
-                <h2>Single Room</h2>
-                <p>Our comfortable single rooms feature a single bed, flat-screen TV, and a private bathroom with a shower.</p>
-                <p>Price per night: $80</p>
-            </li>
-            <li class="img" src="css/img/Login.jpg" >
-                <h2>Double Room</h2>
-                <p>Our spacious double rooms feature a double bed, flat-screen TV, and a private bathroom with a shower.</p>
-                <p>Price per night: $120</p>
-            </li>
-            <li class="img" src="css/img/Login.jpg" >             
-                <h2>Family Room</h2>
-                <p>Our family rooms feature a double bed and two single beds, flat-screen TV, and a private bathroom with a shower.</p>
-                <p>Price per night: $160</p>
-            </li>
-        </ul>
+        <div>
+            <div>
+                <div>
+                    <img src="css/img/Login.jpg"style="width: 100%;height:500px">
+                </div>
+                <div>
+                    <h2>Single Room</h2>
+                    <p>Our comfortable single rooms feature a single bed, flat-screen TV, and a private bathroom with a shower.</p>
+                    <p>Price per night: $80</p>
+                </div> 
+            </div> 
+            <div>
+                <div>
+                    <img src="css/img/Login.jpg" style="width: 100%;height:500px">
+                </div>
+                <div>
+                    <h2>Double Room</h2>
+                    <p>Our spacious double rooms feature a double bed, flat-screen TV, and a private bathroom with a shower.</p>
+                    <p>Price per night: $120</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="css/img/Login.jpg" style="width: 100%;height:500px">
+                </div>
+                <div>       /
+                    <h2>Family Room</h2>
+                    <p>Our family rooms feature a double bed and two single beds, flat-screen TV, and a private bathroom with a shower.</p>
+                    <p>Price per night: $160</p>
+                </div>
+            </div>
+
+        </div>
     </body>
 </body>
 </html>
