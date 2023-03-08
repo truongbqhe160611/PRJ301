@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="css/Room_List.css">
 
     </head>
-    <body>
+<!--    <body>
         <h1 style=" text-align: center;font-size: 3em">Rooms List</h1>
         <div>
             <div class="form-box">
@@ -51,5 +51,68 @@
             <p>© 2023 Hotel Management</p>
         </footer>
     </body>
-</body>
+</body>-->
+<body>
+    <header>
+      <!-- Add your hotel logo and navigation menu here -->
+    </header>
+    
+    <main>
+      <h1>Room List</h1>
+      
+      <!-- Display a list of all rooms in the hotel -->
+      <section class="room-list">
+        <h2>All Rooms</h2>
+        <ul>
+          <!-- Repeat the following code block for each room in the hotel -->
+          <li>
+            <article class="room">
+              <h3>Room Name or Number</h3>
+              <div class="room-image">
+                <img src="room-image.jpg" alt="Room Image">
+              </div>
+              <ul class="room-details">
+                <li><strong>Type:</strong> Room Type</li>
+                <li><strong>Price:</strong> Room Price per night</li>
+                <li><strong>Capacity:</strong> Room Capacity</li>
+                <li><strong>Features:</strong> Room Features</li>
+                <li><strong>Status:</strong> Room Availability Status</li>
+                <li><strong>Book Now:</strong> Link to room booking page</li>
+              </ul>
+            </article>
+          </li>
+          <!-- End of repeated code block -->
+        </ul>
+      </section>
+      
+      <!-- Optionally, display a list of available rooms -->
+      <section class="available-rooms">
+        <h2>Available Rooms</h2>
+        <ul>
+          <!-- Repeat the following code block for each available room in the hotel -->
+          <li>
+            <article class="room">
+              <h3>Room Name or Number</h3>
+              <div class="room-image">
+                <img src="room-image.jpg" alt="Room Image">
+              </div>
+              <ul class="room-details">
+                <li><strong>Type:</strong> Room Type</li>
+                <li><strong>Price:</strong> Room Price per night</li>
+                <li><strong>Capacity:</strong> Room Capacity</li>
+                <li><strong>Features:</strong> Room Features</li>
+                <li><strong>Book Now:</strong> Link to room booking page</li>
+              </ul>
+            </article>
+          </li>
+          <!-- End of repeated code block -->
+        </ul>
+      </section>
+      
+    </main>
+    
+    <footer>
+      <!-- Add any additional footer content here -->
+    </footer>
+  </body>
 </html>
