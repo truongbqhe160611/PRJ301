@@ -52,19 +52,19 @@
         </footer>
     </body>
 </body>-->
-<body>
+<!--<body>
     <header>
-      <!-- Add your hotel logo and navigation menu here -->
+       Add your hotel logo and navigation menu here 
     </header>
     
     <main>
       <h1>Room List</h1>
       
-      <!-- Display a list of all rooms in the hotel -->
+       Display a list of all rooms in the hotel 
       <section class="room-list">
         <h2>All Rooms</h2>
         <ul>
-          <!-- Repeat the following code block for each room in the hotel -->
+           Repeat the following code block for each room in the hotel 
           <li>
             <article class="room">
               <h3>Room Name or Number</h3>
@@ -81,15 +81,15 @@
               </ul>
             </article>
           </li>
-          <!-- End of repeated code block -->
+           End of repeated code block 
         </ul>
       </section>
       
-      <!-- Optionally, display a list of available rooms -->
+       Optionally, display a list of available rooms 
       <section class="available-rooms">
         <h2>Available Rooms</h2>
         <ul>
-          <!-- Repeat the following code block for each available room in the hotel -->
+           Repeat the following code block for each available room in the hotel 
           <li>
             <article class="room">
               <h3>Room Name or Number</h3>
@@ -105,14 +105,66 @@
               </ul>
             </article>
           </li>
-          <!-- End of repeated code block -->
+           End of repeated code block 
         </ul>
       </section>
       
     </main>
     
     <footer>
-      <!-- Add any additional footer content here -->
+       Add any additional footer content here 
     </footer>
-  </body>
+  </body>-->
+<body>
+    <section id="rooms">
+  <h2>List of Rooms</h2>
+  <div class="room-list">
+    <article class="room">
+      <h3>Single Room</h3>
+      <img src="css/img/phong_don_thuong.jpg" alt="Single Room">
+      <ul class="room-features">
+        <li>Queen-sized bed</li>
+        <li>Flat-screen TV</li>
+        <li>Free Wi-Fi</li>
+      </ul>
+      <div class="room-price">
+        <span>Starting from</span>
+        <span class="price">$99</span>
+        <span>per night</span>
+      </div>
+      <a href="#" class="book-now"><input style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer" type="submit" value="Book Room"></a>
+    </article>
+    <article class="room">
+      <h3>Double Room</h3>
+      <img src="css/img/phong_don_thuong2.jpg" alt="Double Room">
+      <ul class="room-features">
+        <li>King-sized bed</li>
+        <li>Balcony with a view</li>
+        <li>Mini-fridge</li>
+      </ul>
+      <div class="room-price">
+        <span>Starting from</span>
+        <span class="price">$199</span>
+        <span>per night</span>
+      </div>
+      <a href="#" class="book-now"><input style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer" type="submit" value="Book Room"></a>
+    </article>
+    <article class="room">
+      <h3>VIP Room</h3>
+      <img src="css/img/phong_nghi.jpg" alt="VIP Room">
+      <ul class="room-features">
+        <li>Separate living room</li>
+        <li>Jacuzzi bathtub</li>
+        <li>Kitchenette</li>
+      </ul>
+      <div class="room-price">
+        <span>Starting from</span>
+        <span class="price">$299</span>
+        <span>per night</span>
+      </div>
+      <a href="#" class="book-now"><input style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer" type="submit" value="Book Room"></a>
+    </article>
+  </div>
+</section>
+</body>
 </html>

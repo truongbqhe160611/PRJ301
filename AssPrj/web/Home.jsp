@@ -92,7 +92,7 @@
       <section class="features">
         <h2>Our Services</h2>
         <div class="feature">
-          <img src="spa.jpg" alt="Spa" class="feature-img">
+            <img src="css/img/" alt="Spa" class="feature-img">
           <h3>Spa</h3>
           <p>Relax and rejuvenate with our spa treatments.</p>
         </div>
@@ -112,27 +112,27 @@
         <h2>Our Rooms</h2>
         <div class="room">
           <img src="room1.jpg" alt="Room 1" class="room-img">
-          <h3>Deluxe Room</h3>
+          <h3>Single Room</h3>
           <p>Spacious room with a king-sized bed, en-suite bathroom, and city view.</p>
           <a href="#" class="btn btn-secondary">Book Now</a>
         </div>
         <div class="room">
           <img src="room2.jpg" alt="Room 2" class="room-img">
-          <h3>Superior Room</h3>
+          <h3>Double Room</h3>
           <p>Comfortable room with a queen-sized bed, en-suite bathroom, and garden view.</p>
           <a href="#" class="btn btn-secondary">Book Now</a>
         </div>
         <div class="room">
           <img src="room3.jpg" alt="Room 3" class="room-img">
-          <h3>Standard Room</h3>
+          <h3>VIP Room</h3>
           <p>Cosy room with a twin-sized bed, en-suite bathroom, and pool view.</p>
-          <a href="#" class="btn btn-secondary">Book Now</a>
+          <a href="" class="btn btn-secondary">Book Now</a>
         </div>
       </section>
     </main>
 
     <footer>
-      <p>&copy; 2023 Hotel Management. All rights reserved.</p>
+      <p>© Trgbui Hotel Management</p>
     </footer>
   </body>
 </html>

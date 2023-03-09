@@ -12,7 +12,7 @@
         <title>JSP Page</title>
         <link rel="stylesheet" href="css/Food.css">
     </head>
-    <body>
+    <body class="background" style="background: url(css/img/background_nha_an.jpg);backdrop-filter:brightness(0.3);">
         <header>
             <h1>Food Service</h1>        
             <nav>                
@@ -27,7 +27,7 @@
         <main>
             <div style="display: flex">
                 <div style="width: 50%;">
-                    <img src="css/img/nen_login2.jpg" style="width: 85%;height: 650px;margin: 20px 30px;border: 1px solid #ccc;padding: 20px;border-radius: 5px;">
+                    <img src="css/img/bua_sang.jpg" style="width: 85%;height: 650px;margin: 20px 30px;border: 1px solid #ccc;padding: 20px;border-radius: 5px;">
                 </div>
                 <div>
                     <section id="breakfast">
@@ -38,7 +38,7 @@
                                 <h3>English Breakfast</h3>
                                 <p>Two eggs, bacon, sausage, grilled tomato, mushrooms, and toast</p>
                                 <button style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer">
-                                Price: $10.99</button>
+                                    Price: $10.99</button>
                             </li>
                             <li>
                                 <h3>Pancakes and Syrup</h3>
@@ -64,7 +64,7 @@
                 <div>
                     <section id="lunch">
                         <h2>Lunch Menu</h2>
-                        <p>Join us for lunch and try one of our delicious dishes!</p>
+                        <p>Join us for lunch </p>
                         <ul>
                             <li>
                                 <h3>Cheeseburger and Fries</h3>
@@ -90,12 +90,12 @@
                     </section>
                 </div>
                 <div style="width: 50%;">
-                    <img src="css/img/nen_login2.jpg" style="width: 85%;height: 650px;margin: 20px 30px;border: 1px solid #ccc;padding: 20px;border-radius: 5px;">
+                    <img src="css/img/bua_trua.jpg" style="width: 85%;height: 650px;margin: 20px 30px;border: 1px solid #ccc;padding: 20px;border-radius: 5px;">
                 </div>
             </div>
             <div style="display: flex">
                 <div style="width: 50%;">
-                    <img src="css/img/nen_login2.jpg" style="width: 85%;height: 650px;margin: 20px 30px;border: 1px solid #ccc;padding: 20px;border-radius: 5px;">
+                    <img src="css/img/bua_toi.jpg" style="width: 85%;height: 650px;margin: 20px 30px;border: 1px solid #ccc;padding: 20px;border-radius: 5px;">
                 </div>
                 <div>
                     <section id="dinner">
@@ -136,7 +136,7 @@
                             <li>
                                 <h3>Soft Drinks</h3>
                                 <p>Coca-Cola, Sprite, Fanta, and more</p>
-                                <button>Price: $2.99</button>
+                                <button style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer">Price: Varies</button>
                             </li>
                             <li>
                                 <h3>Wine</h3>
@@ -157,12 +157,12 @@
                     </section>
                 </div>
                 <div style="width: 50%;">
-                    <img src="css/img/nen_login2.jpg" style="width: 85%;height: 650px;margin: 20px 30px;border: 1px solid #ccc;padding: 20px;border-radius: 5px;">
+                    <img src="css/img/do_uong.png" style="width: 85%;height: 650px;margin: 20px 30px;border: 1px solid #ccc;padding: 20px;border-radius: 5px;">
                 </div>
             </div>
             <div style="display: flex">
                 <div style="width: 50%;">
-                    <img src="css/img/nen_login2.jpg" style="width: 85%;height: 650px;margin: 20px 30px;border: 1px solid #ccc;padding: 20px;border-radius: 5px;">
+                    <img src="css/img/trang_mieng.jpg" style="width: 85%;height: 650px;margin: 20px 30px;border: 1px solid #ccc;padding: 20px;border-radius: 5px;">
                 </div>
                 <div>
 
@@ -197,8 +197,7 @@
             </div>
         </main>
         <footer>
-            <p>© 2023 Hotel Management</p>
+            <p>© Trgbui Hotel Management</p>
         </footer>
-
     </body>
 </html>

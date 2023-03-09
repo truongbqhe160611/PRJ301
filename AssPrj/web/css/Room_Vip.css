@@ -1,0 +1,51 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Mar 9, 2023, 11:55:51 PM
+    Author     : tr498
+*/
+
+.vip-room {
+  margin: 50px auto;
+  max-width: 1400px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0px 0px 10px #ccc;
+  text-align: center;
+}
+
+.vip-room h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.vip-room img {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.vip-room .description {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.vip-room ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.vip-room li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.vip-room li ul li {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+

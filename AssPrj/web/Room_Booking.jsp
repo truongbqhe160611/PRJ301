@@ -38,10 +38,10 @@
                     </form>
                 </div>
             </div>
-        </section>
-        <footer style=" background-color: #232f3e; color: #fff; text-align: center; padding: 10px;">
-            <p>© 2023 Hotel Management</p>
-        </footer>
+        </section>        
     </body>
+    <footer style=" background-color: #0b0b0b; color: #fff; text-align: center; padding: 10px;">
+            <p>© Trgbui Hotel Management</p>
+        </footer>
 </html>
 
