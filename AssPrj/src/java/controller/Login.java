@@ -1,10 +1,12 @@
 package controller;
 
 
+import dal.AccountDAO;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -18,19 +20,30 @@ import java.io.PrintWriter;
  * @author tr498
  */
 public class Login extends HttpServlet{
-        @Override
+@Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String u =req.getParameter("User");
-  	  String p =req.getParameter("Pass");
-          String a = getServletConfig().getInitParameter("taikhoan");
-          String b = getServletConfig().getInitParameter("matkhau");
-          
-	  resp.setContentType("text/html");
-     	  PrintWriter out = resp.getWriter();
-          if(u.equalsIgnoreCase(a) && p.equalsIgnoreCase(b)) {
-              out.println("<h1>Login Successful! " + "</h1>");
-          }
-          else resp.sendRedirect("login.jsp");
+        String email = req.getParameter("email");
+        String password = req.getParameter("password");
+        AccountDAO accountDAO = new AccountDAO();
+        boolean check = accountDAO.checkAccount(email, password);
+        if (check) {
+            HttpSession session = req.getSession();
+            session.setAttribute("email", email);
+            req.getRequestDispatcher("jsp/Schedule.jsp").forward(req, resp);
+        }
+        resp.sendRedirect(req.getContextPath() + "/login");
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String action = req.getServletPath();
+        switch (action) {
+            case "/login":
+                req.getRequestDispatcher("jsp/login.jsp").forward(req, resp);
+                break;
+            default:
+                throw new AssertionError();
+        }
     }
     
     

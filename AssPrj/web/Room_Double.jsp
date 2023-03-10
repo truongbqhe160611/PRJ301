@@ -46,7 +46,7 @@
                 <li>Maximum occupancy: 4 people</li>
             </ul>
             </div>
-            <input style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer" type="submit" value="Book Room">
+            <a href="Room_Booking.jsp"><input style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer" type="submit" value="Book Room"></a>
         </div>
         <div class="room-details">            
             <div style="text-align: left">
@@ -79,7 +79,7 @@
                 <li>Maximum occupancy: 4 people</li>
             </ul>
             </div>
-            <input style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer" type="submit" value="Book Room">
+            <a href="Room_Booking.jsp"><input style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer" type="submit" value="Book Room"></a>
         </div>
         <div class="room-details">            
             <div style="text-align: left">
@@ -112,7 +112,7 @@
                 <li>Maximum occupancy: 4 people</li>
             </ul>
             </div>
-            <input style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer" type="submit" value="Book Room">
+            <a href="Room_Booking.jsp"><input style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer" type="submit" value="Book Room"></a>
         </div>
         <footer style=" background-color: #0b0b0b; color: #fff; text-align: center; padding: 10px;">
             <p>© Trgbui Hotel Management</p>

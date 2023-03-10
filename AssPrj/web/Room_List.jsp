@@ -116,8 +116,8 @@
     </footer>
   </body>-->
 <body>
-    <section id="rooms">
-  <h2>List of Rooms</h2>
+    <section id="rooms" style="background: url(css/img/back_doi.jpg);backdrop-filter:brightness(0.3); margin: 0px">
+        <h2 style="text-align: center">List of Rooms</h2>
   <div class="room-list">
     <article class="room">
       <h3>Single Room</h3>

@@ -86,7 +86,7 @@
             <section class="hero">
                 <h1>Welcome to Our Hotel</h1>
                 <p>Experience luxury and comfort at our hotel.</p>
-                <a href="Room_Booking.jsp" class="btn btn-primary">Book Now</a>
+                <a href="Room_List.jsp" class="btn btn-primary">Book Now</a>
             </section>     
             <section class="rooms">
                 <h2 style="color: white">Our Rooms</h2>

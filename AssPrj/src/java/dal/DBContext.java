@@ -21,6 +21,7 @@ import java.util.logging.Logger;
 public class DBContext {
 
     public Connection conn = null;
+    Connection connection;
 
     public DBContext(String URL, String userName, String password) {
         try {

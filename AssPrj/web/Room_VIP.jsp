@@ -38,9 +38,9 @@
                         <li>Exclusive access to our Executive Lounge with complimentary refreshments and snacks throughout the day</li>
                     </ul>
                 </li>
-                <li style="font-weight: bold;">Price per night: $500</li>
+                <li style="font-weight: bold;">Price per night: $300</li>
             </ul>
-            <input style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer" type="submit" value="Book Room">
+           <a href="Room_Booking.jsp"><input style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer" type="submit" value="Book Room"></a>
         </div>
         <div class="vip-room">
             <h2>Room301</h2>              
@@ -64,9 +64,9 @@
                         <li>Exclusive access to our Executive Lounge with complimentary refreshments and snacks throughout the day</li>
                     </ul>
                 </li>
-                <li style="font-weight: bold;">Price per night: $500</li>
+                <li style="font-weight: bold;">Price per night: $300</li>
             </ul>
-            <input style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer" type="submit" value="Book Room">
+            <a href="Room_Booking.jsp"><input style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer" type="submit" value="Book Room"></a>
         </div>
         <div class="vip-room">
             <h2 style="text-align: left">Room301</h2>              
@@ -90,9 +90,9 @@
                         <li>Exclusive access to our Executive Lounge with complimentary refreshments and snacks throughout the day</li>
                     </ul>
                 </li>
-                <li style="font-weight: bold;">Price per night: $500</li>
+                <li style="font-weight: bold;">Price per night: $300</li>
             </ul>
-            <input style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer" type="submit" value="Book Room">
+            <a href="Room_Booking.jsp"><input style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer" type="submit" value="Book Room"></a>
         </div>  
         </div>
     </body>
