@@ -13,13 +13,15 @@
         <link rel="stylesheet" href="css/Room_Single.css">
 
     </head>
-    <body>
-        <h1 style="text-align: center;">Single Room</h1>
-        <div class="room-details">
+    <body style="background: url(css/img/backdon.jpg);backdrop-filter:brightness(0.3); margin: 0px">
+        <h1 style="text-align: center;color:white">Single Room</h1>
+        <div class="room-details">            
+            <div style="text-align: left">
             <h2>Room101</h2>
-            <p class="room-type">Room Type: Deluxe</p>
+            <p class="room-type">Room Type: Single</p>
             <p class="room-price">Price: $200/night</p>
-            <img src="css/img/Login.jpg" style="width: 100%; height: 550px">           
+            </div>
+            <img src="css/img/Don1.jpg" style="width: 100%; height: 550px">           
             <p class="room-description">Description: Our deluxe room offers a spacious and comfortable stay with a king-sized bed and a balcony overlooking the ocean. The room is equipped with a flat-screen TV, a mini bar, and free Wi-Fi for your convenience. You'll also enjoy a luxurious en-suite bathroom with a bathtub and complimentary toiletries.</p>
             <ul class="room-amenities">
                 <li>King-sized bed with premium bedding</li>
@@ -37,12 +39,15 @@
             <p class="room-policies">Cancellation Policy: Free cancellation up to 24 hours before check-in. After that, the first night will be charged.</p>
             <input style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer" type="submit" value="Book Room">
         </div>
-        <div class="room-details">
+        <div class="room-details">            
+            <div style="text-align: left">
             <h2>Room102</h2>
-            <p class="room-type">Room Type: Deluxe</p>
+            <p class="room-type">Room Type: Single</p>
             <p class="room-price">Price: $200/night</p>
-            <img src="css/img/Login.jpg" style="width: 100%; height: 550px">            
+            </div>
+            <img src="css/img/don2.jpg" style="width: 100%; height: 550px">            
             <p class="room-description">Description: Our deluxe room offers a spacious and comfortable stay with a king-sized bed and a balcony overlooking the ocean. The room is equipped with a flat-screen TV, a mini bar, and free Wi-Fi for your convenience. You'll also enjoy a luxurious en-suite bathroom with a bathtub and complimentary toiletries.</p>
+            <div>
             <ul class="room-amenities">
                 <li>King-sized bed with premium bedding</li>
                 <li>Balcony with ocean view</li>
@@ -56,14 +61,17 @@
                 <li>Telephone</li>
                 <li>Complimentary bottled water</li>
             </ul>
+            </div>
             <p class="room-policies">Cancellation Policy: Free cancellation up to 24 hours before check-in. After that, the first night will be charged.</p>
             <input style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer" type="submit" value="Book Room">
         </div>
-        <div class="room-details">
+        <div class="room-details">            
+            <div style="text-align: left">
             <h2>Room103</h2>
-            <p class="room-type">Room Type: Deluxe</p>
+            <p class="room-type">Room Type: Single</p>
             <p class="room-price">Price: $200/night</p>
-            <img src="css/img/Login.jpg" style="width: 100%; height: 550px">
+            </div>
+            <img src="css/img/Don3.jpg" style="width: 100%; height: 550px">
             <p class="room-description">Description: Our deluxe room offers a spacious and comfortable stay with a king-sized bed and a balcony overlooking the ocean. The room is equipped with a flat-screen TV, a mini bar, and free Wi-Fi for your convenience. You'll also enjoy a luxurious en-suite bathroom with a bathtub and complimentary toiletries.</p>
             <ul class="room-amenities">
                 <li>King-sized bed with premium bedding</li>

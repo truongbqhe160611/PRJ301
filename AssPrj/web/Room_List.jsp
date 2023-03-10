@@ -121,7 +121,7 @@
   <div class="room-list">
     <article class="room">
       <h3>Single Room</h3>
-      <img src="css/img/phong_don_thuong.jpg" alt="Single Room">
+      <img src="css/img/backdon.jpg" alt="Single Room">
       <ul class="room-features">
         <li>Queen-sized bed</li>
         <li>Flat-screen TV</li>
@@ -132,11 +132,11 @@
         <span class="price">$99</span>
         <span>per night</span>
       </div>
-      <a href="#" class="book-now"><input style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer" type="submit" value="Book Room"></a>
+      <a href="Room_Single.jsp" class="book-now"><input style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer" type="submit" value="Book Room"></a>
     </article>
     <article class="room">
       <h3>Double Room</h3>
-      <img src="css/img/phong_don_thuong2.jpg" alt="Double Room">
+      <img src="css/img/back_doi.jpg" alt="Double Room">
       <ul class="room-features">
         <li>King-sized bed</li>
         <li>Balcony with a view</li>
@@ -147,11 +147,11 @@
         <span class="price">$199</span>
         <span>per night</span>
       </div>
-      <a href="#" class="book-now"><input style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer" type="submit" value="Book Room"></a>
+      <a href="Room_Double.jsp" class="book-now"><input style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer" type="submit" value="Book Room"></a>
     </article>
     <article class="room">
       <h3>VIP Room</h3>
-      <img src="css/img/phong_nghi.jpg" alt="VIP Room">
+      <img src="css/img/back_vip.jpg" alt="VIP Room">
       <ul class="room-features">
         <li>Separate living room</li>
         <li>Jacuzzi bathtub</li>
@@ -162,7 +162,7 @@
         <span class="price">$299</span>
         <span>per night</span>
       </div>
-      <a href="#" class="book-now"><input style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer" type="submit" value="Book Room"></a>
+      <a href="Room_VIP.jsp" class="book-now"><input style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer" type="submit" value="Book Room"></a>
     </article>
   </div>
 </section>

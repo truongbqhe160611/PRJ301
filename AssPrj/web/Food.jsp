@@ -12,7 +12,7 @@
         <title>JSP Page</title>
         <link rel="stylesheet" href="css/Food.css">
     </head>
-    <body class="background" style="background: url(css/img/background_nha_an.jpg);backdrop-filter:brightness(0.3);">
+    <body style="background: url(css/img/background_nha_an.jpg);backdrop-filter:brightness(0.3);">
         <header>
             <h1>Food Service</h1>        
             <nav>                

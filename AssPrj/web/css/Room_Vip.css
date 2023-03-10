@@ -8,12 +8,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 */
 
 .vip-room {
-  margin: 50px auto;
-  max-width: 1400px;
+  margin: 30px auto;
+  max-width: 1000px;
   border: 1px solid #ccc;
   padding: 20px;
   box-shadow: 0px 0px 10px #ccc;
   text-align: center;
+  color: white;  
 }
 
 .vip-room h2 {
@@ -28,19 +29,18 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 }
 
 .vip-room .description {
-  font-size: 20px;
-  margin-bottom: 20px;
+  font-style: italic;
 }
 
 .vip-room ul {
-  list-style: none;
+  list-style: square;
   margin: 0;
   padding: 0;
   text-align: left;
+  color:white;
 }
 
 .vip-room li {
-  font-size: 18px;
   margin-bottom: 10px;
 }
 

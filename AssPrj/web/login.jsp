@@ -33,9 +33,9 @@
                         <div class="forget"></div>
                         <label for=""> <input type="checkbox"> Remember Me</label>
                         <a href="#">Forget password?</a></br>
-                        <button>Log in</button>      
+                        <a href="Home.jsp"><button>Log in</button></a>      
                         <div class="register">
-                            <p>Don't have a account <a href="#"> Register</a></p>
+                            <p>Don't have a account <a href="Register.jsp"> Register</a></p>
                         </div>
                     </form>
                 </div>

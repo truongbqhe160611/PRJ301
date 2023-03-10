@@ -13,11 +13,12 @@
         <link rel="stylesheet" href="css/Room_Vip.css">
 
     </head>
-    <body>
-        <h1 style="text-align: center">VIP Room</h1>
+    <body style="background: url(css/img/back_vip.jpg); margin: 0px 0px">  
+        <div style="backdrop-filter: brightness(0.3);">
+        <h1 style="text-align: center;color: white">VIP Room</h1>           
         <div class="vip-room">
-            <h2>Room 301</h2>              
-            <img src="css/img/phong_nghi.jpg" alt="VIP Room">
+            <h2 style="text-align: left">Room 301</h2>              
+            <img src="css/img/phong vip.jpg" alt="VIP Room">
             <p class="description">Experience luxury like never before in our VIP Room. Located on the top floor, this spacious room boasts stunning ocean views and features premium amenities to ensure a comfortable and unforgettable stay.</p>
             <ul>
                 <li>Room size: 600 square feet</li>
@@ -37,13 +38,13 @@
                         <li>Exclusive access to our Executive Lounge with complimentary refreshments and snacks throughout the day</li>
                     </ul>
                 </li>
-                <li>Price per night: $500</li>
+                <li style="font-weight: bold;">Price per night: $500</li>
             </ul>
             <input style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer" type="submit" value="Book Room">
         </div>
         <div class="vip-room">
             <h2>Room301</h2>              
-            <img src="css/img/phong_nghi.jpg" alt="VIP Room">
+            <img src="css/img/phong vip 2.jpg" alt="VIP Room">
             <p class="description">Experience luxury like never before in our VIP Room. Located on the top floor, this spacious room boasts stunning ocean views and features premium amenities to ensure a comfortable and unforgettable stay.</p>
             <ul>
                 <li>Room size: 600 square feet</li>
@@ -63,13 +64,13 @@
                         <li>Exclusive access to our Executive Lounge with complimentary refreshments and snacks throughout the day</li>
                     </ul>
                 </li>
-                <li>Price per night: $500</li>
+                <li style="font-weight: bold;">Price per night: $500</li>
             </ul>
             <input style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer" type="submit" value="Book Room">
         </div>
         <div class="vip-room">
-            <h2>Room301</h2>              
-            <img src="css/img/phong_nghi.jpg" alt="VIP Room">
+            <h2 style="text-align: left">Room301</h2>              
+            <img src="css/img/phong_vip3.jpg" alt="VIP Room">
             <p class="description">Experience luxury like never before in our VIP Room. Located on the top floor, this spacious room boasts stunning ocean views and features premium amenities to ensure a comfortable and unforgettable stay.</p>
             <ul>
                 <li>Room size: 600 square feet</li>
@@ -89,9 +90,10 @@
                         <li>Exclusive access to our Executive Lounge with complimentary refreshments and snacks throughout the day</li>
                     </ul>
                 </li>
-                <li>Price per night: $500</li>
+                <li style="font-weight: bold;">Price per night: $500</li>
             </ul>
             <input style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer" type="submit" value="Book Room">
+        </div>  
         </div>
     </body>
     <footer style=" background-color: #0b0b0b; color: #fff; text-align: center; padding: 10px;">
