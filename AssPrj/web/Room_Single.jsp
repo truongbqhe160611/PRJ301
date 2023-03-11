@@ -14,7 +14,15 @@
 
     </head>
     <body style="background: url(css/img/backdon.jpg);backdrop-filter:brightness(0.3); margin: 0px">
-        <h1 style="text-align: center;color:white">Single Room</h1>
+        <header>
+            <h2 class="logo">Room Single</h2>
+            <nav class="navigation">
+                <a href="Home.jsp">Home</a>
+                <a href="Room_Single.jsp">Room101</a>
+                <a href="Room_Double.jsp">Room102</a>
+                <a href="Room_VIP.jsp">Room103</a>               
+            </nav>
+        </header>
         <div class="room-details">            
             <div style="text-align: left">
             <h2>Room101</h2>
@@ -89,7 +97,7 @@
             <p class="room-policies">Cancellation Policy: Free cancellation up to 24 hours before check-in. After that, the first night will be charged.</p>
            <a href="Room_Booking.jsp"><input style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer" type="submit" value="Book Room"></a>
         </div>
-        <footer style=" background-color: #0b0b0b; color: #fff; text-align: center; padding: 10px;">
+       <footer style=" background-color: #0b0b0b; color: #fff; text-align: center; padding: 20px;">
             <p>© Trgbui Hotel Management</p>
         </footer>
     </body>

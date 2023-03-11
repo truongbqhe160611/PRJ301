@@ -69,45 +69,43 @@
           <p>&copy; 2023 Hotel Management. All rights reserved.</p>
         </footer>
       </body>-->
-    <body>
+    <body>     
         <header>
-            <nav>
-                <ul>
-                    <li><a href="Home.jsp">Home</a></li>
-                    <li><a href="Room_List.jsp">Rooms</a></li>
-                    <li><a href="Food.jsp">Services</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
+            <h2 class="logo">Logo</h2>
+            <nav class="navigation">
+                <a href="Home.jsp">Home</a>
+                <a href="Room_List.jsp">Rooms</a>
+                <a href="Food.jsp">Services</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
             </nav>
         </header>
-
         <main>
             <section class="hero">
                 <h1>Welcome to Our Hotel</h1>
                 <p>Experience luxury and comfort at our hotel.</p>
                 <a href="Room_List.jsp" class="btn btn-primary">Book Now</a>
             </section>     
-            <section class="rooms">
+            <section class="rooms" style="margin-right: 140px">
                 <h2 style="color: white">Our Rooms</h2>
-                    <div class="room">
+                <div class="room">
                     <img src="css/img/backdon.jpg" alt="Room 1" class="room-img">
                     <h3>Single Room</h3>
                     <p>Spacious room with a king-sized bed, en-suite bathroom, and city view.</p>                   
-                    </div>
-                    <div class="room">
-                        <img src="css/img/back_doi.jpg" alt="Room 2" class="room-img">
-                        <h3>Double Room</h3>
-                        <p>Comfortable room with a queen-sized bed, en-suite bathroom, and garden view.</p>
-                    </div>
-                    <div class="room">
-                        <img src="css/img/back_vip.jpg" alt="Room 3" class="room-img">
-                        <h3>VIP Room</h3>
-                        <p>Cosy room with a twin-sized bed, en-suite bathroom, and pool view.</p>
-                    </div>
+                </div>
+                <div class="room">
+                    <img src="css/img/back_doi.jpg" alt="Room 2" class="room-img">
+                    <h3>Double Room</h3>
+                    <p>Comfortable room with a queen-sized bed, en-suite bathroom, and garden view.</p>
+                </div>
+                <div class="room">
+                    <img src="css/img/back_vip.jpg" alt="Room 3" class="room-img">
+                    <h3>VIP Room</h3>
+                    <p>Cosy room with a twin-sized bed, en-suite bathroom, and pool view.</p>
+                </div>
             </section>
 
-            <section class="features" style="margin-left: -15px;">
+            <section class="features" style="margin-left: -140px;">
                 <h2 style="color: white">Our Services</h2>
                 <div class="feature">
                     <img src="css/img/background_nha_an.jpg" alt="Restaurant" class="feature-img">
@@ -126,7 +124,7 @@
                 </div>       
             </section>
         </main>
-        <footer style=" background-color: #0b0b0b; color: #fff; text-align: center; padding: 10px;">
+        <footer style=" background-color: #0b0b0b; color: #fff; text-align: center; padding: 20px;">
             <p>© Trgbui Hotel Management</p>
         </footer>
     </body>

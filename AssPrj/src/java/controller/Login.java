@@ -29,17 +29,17 @@ public class Login extends HttpServlet{
         if (check) {
             HttpSession session = req.getSession();
             session.setAttribute("email", email);
-            req.getRequestDispatcher("jsp/Schedule.jsp").forward(req, resp);
+            req.getRequestDispatcher("/Home.jsp").forward(req, resp);
         }
-        resp.sendRedirect(req.getContextPath() + "/login");
+        resp.sendRedirect(req.getContextPath() + "/Home.jsp");
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String action = req.getServletPath();
         switch (action) {
-            case "/login":
-                req.getRequestDispatcher("jsp/login.jsp").forward(req, resp);
+            case "login.jsp":
+                req.getRequestDispatcher("login.jsp").forward(req, resp);
                 break;
             default:
                 throw new AssertionError();

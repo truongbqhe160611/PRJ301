@@ -14,8 +14,17 @@
 
     </head>
     <body style="background: url(css/img/back_vip.jpg); margin: 0px 0px">  
-        <div style="backdrop-filter: brightness(0.3);">
-        <h1 style="text-align: center;color: white">VIP Room</h1>           
+        <header>
+            <h2 class="logo">Room VIP</h2>
+            <nav class="navigation">
+                <a href="Home.jsp">Home</a>
+                <a href="Room_List.jsp">Room List</a>
+                <a href="Room_Single.jsp">Room301</a>
+                <a href="Room_Double.jsp">Room302</a>
+                <a href="Room_VIP.jsp">Room303</a>               
+            </nav>
+        </header>
+        <div style="backdrop-filter: brightness(0.3);">        
         <div class="vip-room">
             <h2 style="text-align: left">Room 301</h2>              
             <img src="css/img/phong vip.jpg" alt="VIP Room">
@@ -95,8 +104,8 @@
             <a href="Room_Booking.jsp"><input style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer" type="submit" value="Book Room"></a>
         </div>  
         </div>
+        <footer style=" background-color: #0b0b0b; color: #fff; text-align: center; padding: 20px;">
+            <p>© Trgbui Hotel Management</p>
+        </footer>
     </body>
-    <footer style=" background-color: #0b0b0b; color: #fff; text-align: center; padding: 10px;">
-        <p>© Trgbui Hotel Management</p>
-    </footer>
 </html>

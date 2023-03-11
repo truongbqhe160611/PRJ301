@@ -38,10 +38,10 @@
                     </form>
                 </div>
             </div>
-        </section>        
-    </body>
-    <footer style=" background-color: #0b0b0b; color: #fff; text-align: center; padding: 10px;">
+        </section>  
+        <footer style=" background-color: #0b0b0b; color: #fff; text-align: center; padding: 20px;">
             <p>© Trgbui Hotel Management</p>
         </footer>
+    </body>
 </html>
 

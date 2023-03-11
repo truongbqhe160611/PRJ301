@@ -1,71 +1,121 @@
-/* Style for the room details container */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    background: #403b39;
+}
+
+.logo{
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+}
+
+.navigation a{
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+.navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+.navigation a:hover:after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
 .room-details {
-  margin: 30px auto; 
-  border: 1px solid #ccc;
-  padding: 20px;
-  max-width: 1000px;
-  box-shadow: 0px 0px 10px #ccc;
-  text-align: center;
-  color:white;  
+    margin: 30px auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    max-width: 1000px;
+    box-shadow: 0px 0px 10px #ccc;
+    text-align: center;
+    color:white;
 }
 
-/* Style for the room title */
+
 .room-details h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
-/* Style for the room type and price */
+
 .room-details p.room-type, .room-details p.room-price {
-  font-size: 18px;
-  margin-bottom: 10px;
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 .room-details .room-price {
-  font-weight: bold;
+    font-weight: bold;
 }
 
-/* Style for the room images */
+
 .room-details .room-images {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
 .room-details .room-img {
-  max-width: 33%;
-  margin: 0 10px;
+    max-width: 33%;
+    margin: 0 10px;
 }
 
-/* Style for the room description */
+
 .room-details p.room-description {
-  font-style: italic;
+    font-style: italic;
 }
 
-/* Style for the room amenities list */
+
 .room-details ul.room-amenities {
-  font-size: 16px;
-  margin-bottom: 30px;
+    font-size: 16px;
+    margin-bottom: 30px;
 }
 
 .room-details ul.room-amenities li {
-  margin-bottom: 10px;
-  text-align: left;
-  list-style: square
+    margin-bottom: 10px;
+    text-align: left;
+    list-style: square
 }
 
 /* Style for the additional information section */
 .room-details h3 {
-  font-size: 24px;
-  margin-bottom: 20px;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
 /* Style for the room policies section */
 .room-details ul.room-policies {
-  font-size: 16px;
-  margin-bottom: 30px;
+    font-size: 16px;
+    margin-bottom: 30px;
 }
 
 .room-details ul.room-policies li {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }

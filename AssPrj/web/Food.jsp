@@ -13,17 +13,17 @@
         <link rel="stylesheet" href="css/Food.css">
     </head>
     <body style="background: url(css/img/background_nha_an.jpg);backdrop-filter:brightness(0.3);">
-        <header>
-            <h1>Food Service</h1>        
-            <nav>                
+         <header>
+            <h2 class="logo">Food Service</h2>
+            <nav class="navigation">
+                <a href="Home.jsp">Home</a>
                 <a href="#breakfast">Breakfast</a>
                 <a href="#lunch">Lunch</a>
                 <a href="#dinner">Dinner</a>
                 <a href="#drinks">Drinks</a>
-                <a href="#desserts">Desserts</a>             
+                <a href="#desserts">Desserts</a>               
             </nav>
         </header>
-
         <main>
             <div style="display: flex">
                 <div style="width: 50%;">
@@ -196,7 +196,7 @@
                 </div>
             </div>
         </main>
-        <footer>
+        <footer style=" background-color: #0b0b0b; color: #fff; text-align: center; padding: 20px;">
             <p>© Trgbui Hotel Management</p>
         </footer>
     </body>

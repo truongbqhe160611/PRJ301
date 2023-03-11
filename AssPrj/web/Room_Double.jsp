@@ -14,9 +14,18 @@
 
     </head>
     <body style="background: url(css/img/back_doi.jpg);backdrop-filter:brightness(0.3); margin: 0px">
-        <h1 style="text-align: center;color: white">Double Room</h1>
+        <header>
+            <h2 class="logo">Room Double</h2>
+            <nav class="navigation">
+                <a href="Home.jsp">Home</a>
+                <a href="#Room201">Room201</a>
+                <a href="#Room202">Room202</a>
+                <a href="Room_VIP.jsp">Room203</a>               
+            </nav>
+        </header>
         <div class="room-details">            
             <div style="text-align: left">
+            <section id="#Room201">
             <h2>Room201</h2>
             <p class="room-type">Room Type: Double</p>
             <p class="room-price">Price: $200/night</p>
@@ -47,8 +56,10 @@
             </ul>
             </div>
             <a href="Room_Booking.jsp"><input style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer" type="submit" value="Book Room"></a>
+        </section>
         </div>
         <div class="room-details">            
+            <section id="#Room202">
             <div style="text-align: left">
             <h2>Room202</h2>
             <p class="room-type">Room Type: Double</p>
@@ -80,6 +91,7 @@
             </ul>
             </div>
             <a href="Room_Booking.jsp"><input style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer" type="submit" value="Book Room"></a>
+        </section>
         </div>
         <div class="room-details">            
             <div style="text-align: left">
@@ -114,7 +126,7 @@
             </div>
             <a href="Room_Booking.jsp"><input style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer" type="submit" value="Book Room"></a>
         </div>
-        <footer style=" background-color: #0b0b0b; color: #fff; text-align: center; padding: 10px;">
+        <footer style=" background-color: #0b0b0b; color: #fff; text-align: center; padding: 20px;">
             <p>© Trgbui Hotel Management</p>
         </footer>
     </body>
