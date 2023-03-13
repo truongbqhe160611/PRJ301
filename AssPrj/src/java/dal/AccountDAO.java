@@ -38,7 +38,7 @@ public class AccountDAO extends DBContext {
         try {
             String strSelect = "select * from customers "
                     + "where email=? and "
-                    + "password=?";
+                    + "password=? ";
 
             pstm = cnn.prepareStatement(strSelect);
             pstm.setString(1, email);
@@ -51,6 +51,23 @@ public class AccountDAO extends DBContext {
             System.out.println("checkAccount:" + e.getMessage());
         }
         return false;
+    }
+    
+    
+     public boolean register(String name,String email, String password,String phone, String address) {
+        String sql = "INSERT INTO [dbo].[customers]([name],[email],[password],[phone],[address])\n"
+                + "     VALUES(?,?,?,?,?)";
+        try {
+            pstm = cnn.prepareStatement(sql);
+            pstm.setString(1, name);
+            pstm.setString(2, email);
+            pstm.setString(3, password);
+            pstm.setString(4, phone);   
+            pstm.setString(5, address); 
+            return pstm.executeUpdate() == 1;
+        } catch (Exception e) {
+            return false;
+        }
     }
     
 }

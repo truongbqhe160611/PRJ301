@@ -5,16 +5,29 @@
 package Model;
 
 public class Account {
-
-    String email, password;
-
+    String name;
+    String email;
+    String password;
+    String phone;
+    String address;
     public Account() {
     }
 
-    
-    public Account(String email, String password) {
+    public Account( String name, String email, String password, String phone, String address) {
+        this.name = name;
         this.email = email;
         this.password = password;
+        this.phone = phone;
+        this.address = address;
+    }
+
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getEmail() {
@@ -33,6 +46,21 @@ public class Account {
         this.password = password;
     }
 
-    
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+   
 }
 

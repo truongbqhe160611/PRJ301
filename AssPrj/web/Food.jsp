@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="css/Food.css">
     </head>
     <body style="background: url(css/img/background_nha_an.jpg);backdrop-filter:brightness(0.3);">
-         <header>
+        <header style="margin-top:-75px;">
             <h2 class="logo">Food Service</h2>
             <nav class="navigation">
                 <a href="Home.jsp">Home</a>
@@ -24,10 +24,10 @@
                 <a href="#desserts">Desserts</a>               
             </nav>
         </header>
-        <main>
+        <main style="margin-top: 75px;">
             <div style="display: flex">
                 <div style="width: 50%;">
-                    <img src="css/img/bua_sang.jpg" style="width: 85%;height: 650px;margin: 20px 30px;border: 1px solid #ccc;padding: 20px;border-radius: 5px;">
+                    <img src="css/img/bua_sang.jpg" style="width: 90%;height: 650px;margin: 20px 30px;border: 1px solid #ccc;padding: 20px;border-radius: 5px;">
                 </div>
                 <div>
                     <section id="breakfast">
@@ -90,12 +90,12 @@
                     </section>
                 </div>
                 <div style="width: 50%;">
-                    <img src="css/img/bua_trua.jpg" style="width: 85%;height: 650px;margin: 20px 30px;border: 1px solid #ccc;padding: 20px;border-radius: 5px;">
+                    <img src="css/img/bua_trua.jpg" style="width: 90%;height: 650px;margin: 20px 30px;border: 1px solid #ccc;padding: 20px;border-radius: 5px;">
                 </div>
             </div>
             <div style="display: flex">
                 <div style="width: 50%;">
-                    <img src="css/img/bua_toi.jpg" style="width: 85%;height: 650px;margin: 20px 30px;border: 1px solid #ccc;padding: 20px;border-radius: 5px;">
+                    <img src="css/img/bua_toi.jpg" style="width: 90%;height: 650px;margin: 20px 30px;border: 1px solid #ccc;padding: 20px;border-radius: 5px;">
                 </div>
                 <div>
                     <section id="dinner">
@@ -157,12 +157,12 @@
                     </section>
                 </div>
                 <div style="width: 50%;">
-                    <img src="css/img/do_uong.png" style="width: 85%;height: 650px;margin: 20px 30px;border: 1px solid #ccc;padding: 20px;border-radius: 5px;">
+                    <img src="css/img/do_uong.png" style="width: 90%;height: 650px;margin: 20px 30px;border: 1px solid #ccc;padding: 20px;border-radius: 5px;">
                 </div>
             </div>
             <div style="display: flex">
                 <div style="width: 50%;">
-                    <img src="css/img/trang_mieng.jpg" style="width: 85%;height: 650px;margin: 20px 30px;border: 1px solid #ccc;padding: 20px;border-radius: 5px;">
+                    <img src="css/img/trang_mieng.jpg" style="width: 90%;height: 650px;margin: 20px 30px;border: 1px solid #ccc;padding: 20px;border-radius: 5px;">
                 </div>
                 <div>
 

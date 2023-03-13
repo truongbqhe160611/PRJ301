@@ -57,7 +57,7 @@ header{
     transform: scaleX(1);
 }
 .vip-room {
-  margin: 30px auto;
+  margin: 30px auto 0px;
   max-width: 1000px;
   border: 1px solid #ccc;
   padding: 20px;

@@ -75,9 +75,9 @@
             <nav class="navigation">
                 <a href="Home.jsp">Home</a>
                 <a href="Room_List.jsp">Rooms</a>
-                <a href="Food.jsp">Services</a>
-                <a href="#">About</a>
+                <a href="Food.jsp">Services</a>              
                 <a href="#">Contact</a>
+                <a href="login.jsp">Log out</a>
             </nav>
         </header>
         <main>
