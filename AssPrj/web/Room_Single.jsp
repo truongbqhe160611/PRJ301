@@ -29,7 +29,7 @@
                 <div class="room-details" style="margin-top:100px;" >            
                     <div style="text-align: left">
                         <section id="Room101">
-                            <h2>Room101</h2>
+                            <h2>Room101 ID:1</h2>
                             <p class="room-type">Room Type: Single</p>
                             <p class="room-price">Price: $100/night</p>
                         </section>
@@ -55,7 +55,7 @@
                 <div class="room-details">            
                     <div style="text-align: left">
                         <section id="Room102">
-                            <h2>Room102</h2>
+                            <h2>Room102 ID:2</h2>
                             <p class="room-type">Room Type: Single</p>
                             <p class="room-price">Price: $100/night</p>
                         </section>
@@ -83,7 +83,7 @@
                 <div class="room-details">            
                     <div style="text-align: left">
                         <section id="Room103">
-                            <h2>Room103</h2>
+                            <h2>Room103 ID:3</h2>
                             <p class="room-type">Room Type: Single</p>
                             <p class="room-price">Price: $100/night</p>
                         </section>

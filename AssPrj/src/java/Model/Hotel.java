@@ -9,7 +9,6 @@ package Model;
  * @author tr498
  */
 public class Hotel {
-    int id;
     String name;
     String adress;
     int phone;
@@ -17,21 +16,12 @@ public class Hotel {
     public Hotel() {
     }
 
-    public Hotel(int id, String name, String adress, int phone) {
-        this.id = id;
+    public Hotel( String name, String adress, int phone) {       
         this.name = name;
         this.adress = adress;
         this.phone = phone;
     }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
+    
     public String getName() {
         return name;
     }

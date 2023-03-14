@@ -28,7 +28,7 @@
             <div style="backdrop-filter: brightness(0.3);">        
                 <div class="vip-room" style="margin-top:100px;">
                     <section id="Room301">
-                        <h2 style="text-align: left">Room 301</h2>   
+                        <h2 style="text-align: left">Room 301 ID:7</h2>   
                     </section>
                     <img src="css/img/phong vip.jpg" alt="VIP Room">
                     <p class="description">Experience luxury like never before in our VIP Room. Located on the top floor, this spacious room boasts stunning ocean views and features premium amenities to ensure a comfortable and unforgettable stay.</p>
@@ -56,7 +56,7 @@
                 </div>
                 <div class="vip-room">
                     <section id="Room302">
-                        <h2>Room302</h2> 
+                        <h2 style="text-align: left">Room302 ID:8</h2> 
                     </section>
                     <img src="css/img/phong vip 2.jpg" alt="VIP Room">
                     <p class="description">Experience luxury like never before in our VIP Room. Located on the top floor, this spacious room boasts stunning ocean views and features premium amenities to ensure a comfortable and unforgettable stay.</p>
@@ -84,7 +84,7 @@
                 </div>
                 <div class="vip-room">
                     <section id="Room303">
-                        <h2 style="text-align: left">Room303</h2> 
+                        <h2 style="text-align: left">Room303 ID:9</h2> 
                     </section>
                     <img src="css/img/phong_vip3.jpg" alt="VIP Room">
                     <p class="description">Experience luxury like never before in our VIP Room. Located on the top floor, this spacious room boasts stunning ocean views and features premium amenities to ensure a comfortable and unforgettable stay.</p>

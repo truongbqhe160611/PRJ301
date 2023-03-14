@@ -4,15 +4,16 @@
     Author     : tr498
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-        <link rel="stylesheet" href="css/Room_Double.css">
+        <link rel="stylesheet" href="css/Room_Booked.css">
     </head>
-    <body>
+    <body style="background: url(css/img/room_booking.jpg) no-repeat;">
         <header>
             <h2 class="logo">Room Booked</h2>
             <nav class="navigation">
@@ -23,30 +24,36 @@
             </nav>
         </header>
         <div class="room-details">
-            <h2>Room 101</h2>
-            <p class="description">This cozy room features a comfortable queen-sized bed and a private bathroom. Amenities include a flat-screen TV, air conditioning, and free Wi-Fi.</p>
             <div class="booking-details">
                 <h3>Booking Information</h3>
-                <ul>
-                    <li>Booking ID: 123456789</li>
-                    <li>Check-in date: 2023-03-10</li>
-                    <li>Check-out date: 2023-03-15</li>
-                    <li>Number of guests: 2</li>
-                    <li>Total cost: $750</li>
-                    <li>Payment method: Credit card</li>
-                    <li>Special requests: Non-smoking room, extra pillows, and blanket</li>
-                    <li>Notes: The guest has requested a late check-out at 2:00 pm on the day of departure.</li>
-                </ul>
-                <h3>User Information</h3>
-                <ul>
-                    <li>Guest name: John Doe</li>
-                    <li>Guest email: johndoe@example.com</li>
-                    <li>Guest phone: +1 (555) 555-5555</li>
-                    <li>Guest address: 123 Main St, Anytown, USA</li>
-                </ul>
-            </div>
-            <div class="room-image">
-                <img src="room101.jpg" alt="Room 101">
+                <table>
+                    <tr>                      
+                        <th>customer_id</th>
+                        <th>room_id</th>
+                        <th>name</th>
+                        <th>room_type</th>
+                        <th>room_number</th>
+                        <th>check_in</th>
+                        <th>check_out</th>
+                    </tr>
+                    <c:forEach begin="1" end="5" var="x">
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>truong</td>
+                            <td>single</td>
+                            <td>101</td>
+                            <td>2023-03-12</td>
+                            <td>2023-03-14</td>
+                            <td>
+                                <a href="#">Update</a>
+                                <a href="#">Delete</a>
+                            </td>
+                        </tr>
+                        
+                        </c:forEach>
+                    </tr>                 
+                </table>
             </div>
         </div>
     </body>

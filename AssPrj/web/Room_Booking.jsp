@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="css/Room_Booking.css">
     </head>
     <body class="container">
+        
         <header>
             <h2 class="logo">Room Double</h2>
             <nav class="navigation">
@@ -26,37 +27,39 @@
             <div class="form-box">
                 <div class="form-value">
                     <h1 style="font-size: 3em;color: #fff;text-align: center;margin: 0 0 20px;">Room Booking</h1>
-                    <form class="form">
+                    <form class="form" action="booking" method="POST">
+                        <label for="customerId">CustomerId:</label>
+                        <input type="text" id="customerId" name="customerId"><br><br>
+                        <label for="roomId">roomId:</label>
+                        <input type="text" id="roomId" name="roomId"><br><br>
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="name"><br><br>
-                        <label for="Address">Address:</label>
-                        <input type="text" id="Address" name="Address"><br><br>
-                        <label for="Phone">Phone</label>
-                        <input type="text" id="Phone" name="Phone"><br><br>
-                        <label for="room-type">Room Type:</label>
-                        <select id="room-type" name="room-type">
+                        <label for="roomType">Room Type:</label>
+                        <select id="roomType" name="roomType">
                             <option value="single">Single</option>
                             <option value="double">Double</option>
                             <option value="suite">VIP</option>
-                        </select><br><br>
-                        <label for="room-type">Room Type:</label>
-                        <select id="room-number" name="room-number">
-                            <option value="Room101">Room101</option>
-                            <option value="Room102">Room102</option>
-                            <option value="Room103">Room103</option>
-                            <option value="Room101">Room201</option>
-                            <option value="Room102">Room202</option>
-                            <option value="Room103">Room203</option>
-                            <option value="Room101">Room301</option>
-                            <option value="Room102">Room302</option>
-                            <option value="Room103">Room303</option>
-                        </select><br><br>                       
-                        <label for="check-in-date">Check-in Date:</label>
-                        <input type="date" id="check-in-date" name="check-in-date"><br><br>
+                        </select><br><br> 
+                        <label for="roomNumber">Room Number:</label>
+                        <select id="roomNumber" name="roomNumber">
+                            <option value="101">Room101</option>
+                            <option value="102">Room102</option>
+                            <option value="103">Room103</option>
+                            <option value="201">Room201</option>
+                            <option value="202">Room202</option>
+                            <option value="303">Room203</option>
+                            <option value="101">Room301</option>
+                            <option value="102">Room302</option>
+                            <option value="103">Room303</option>
+                        </select><br><br> 
+                        <label for="checkInDate">Check-in Date:</label>
+                        <input type="date" id="checkInDate" name="checkInDate"><br><br>
 
-                        <label for="check-out-date">Check-out Date:</label>
-                        <input type="date" id="check-out-date" name="check-out-date"><br><br>
+                        <label for="checkOutDate">Check-out Date:</label>
+                        <input type="date" id="checkOutDate" name="checkOutDate"><br><br>
 
+                                              
+                        
                         <input style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer" type="submit" value="Book Room">
                     </form>
                 </div>

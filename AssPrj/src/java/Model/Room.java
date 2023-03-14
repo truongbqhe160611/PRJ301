@@ -9,8 +9,6 @@ package Model;
  * @author tr498
  */
 public class Room {
-    int id;
-    int hotel_id;
     int room_number;
     String room_type;
     int price;
@@ -18,29 +16,12 @@ public class Room {
     public Room() {
     }
 
-    public Room(int id, int hotel_id, int room_number, String room_type, int price) {
-        this.id = id;
-        this.hotel_id = hotel_id;
+    public Room( int room_number, String room_type, int price) {
         this.room_number = room_number;
         this.room_type = room_type;
         this.price = price;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getHotel_id() {
-        return hotel_id;
-    }
-
-    public void setHotel_id(int hotel_id) {
-        this.hotel_id = hotel_id;
-    }
 
     public int getRoom_number() {
         return room_number;

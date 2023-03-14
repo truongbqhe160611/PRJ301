@@ -42,14 +42,15 @@ public class BookingDAO extends DBContext{
              String str = "SELECT * FROM bookings";
              pstm = cnn.prepareStatement(str);
              rs = pstm.executeQuery();
-            while (rs.next()) {
-                int id = rs.getInt("id");
-                int customerId = rs.getInt("customer_Id");
+            while (rs.next()) {     
+                int customerId = rs.getInt("customer_id");
+                int roomId = rs.getInt("room_id");
+                String name = rs.getString("name");
                 String roomType = rs.getString("room_type");  
-                Date checkInDate = rs.getDate("check_in_date");
-                Date checkOutDate = rs.getDate("check_out_date");
-                int roomNumber = rs.getInt("room_number");             
-                Booking booking = new Booking(id, customerId, roomType, checkInDate, checkOutDate, roomNumber);              
+                int roomNumber = rs.getInt("room_number");  
+                Date checkInDate = rs.getDate("check_in");
+                Date checkOutDate = rs.getDate("check_out");                          
+                Booking booking = new Booking( customerId,roomId,name, roomType,roomNumber, checkInDate, checkOutDate);              
                 bookings.add(booking);
             }
         } catch (Exception e) {
@@ -58,16 +59,18 @@ public class BookingDAO extends DBContext{
         return bookings;
     }
     
-    public boolean bookings(int customerId, String roomType, Date checkInDate, Date checkOutDate, int roomNumber) {
-        String sql = "INSERT INTO [dbo].[bookings]([customerId],[roomType],[checkInDate],[checkOutDate],[roomNumber])\n"
-                + "     VALUES(?,?,?,?,?)";
+    public boolean bookings(String customerId,String roomId,String name, String roomType, String roomNumber, String checkInDate, String checkOutDate) {
+        String sql = "INSERT INTO [dbo].[bookings]([customer_id],[room_id],[name],[room_type],[room_number],[check_in],[check_out])\n"
+                + "     VALUES(?,?,?,?,?,?,?)";
         try {
             pstm = cnn.prepareStatement(sql);
-            pstm.setInt(1, customerId);
-            pstm.setString(2, roomType);
-            pstm.setDate(3, checkInDate);
-            pstm.setDate(4, checkOutDate);   
-            pstm.setInt(5, roomNumber); 
+            pstm.setInt(1, Integer.parseInt(customerId));
+            pstm.setInt(2, Integer.parseInt(roomId));
+            pstm.setString(3, name);
+            pstm.setString(4, roomType);
+            pstm.setInt(5, Integer.parseInt(roomNumber));
+            pstm.setDate(6, Date.valueOf(checkInDate));
+            pstm.setDate(7, Date.valueOf(checkOutDate));               
             return pstm.executeUpdate() == 1;
         } catch (Exception e) {
             return false;

@@ -22,24 +22,26 @@ import java.util.List;
  */
 public class Bookings extends HttpServlet {
 
-   private AccountDAO dao = new AccountDAO();
+   private BookingDAO dao = new BookingDAO();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.getRequestDispatcher("Room_Booked.jsp").forward(request, response);
+        request.getRequestDispatcher("Room_Booking.jsp").forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        try {           
+        try {
             String customerId = request.getParameter("customerId");
+            String roomId = request.getParameter("roomId");
+            String name = request.getParameter("name");
             String roomType = request.getParameter("roomType");
+            String roomNumber = request.getParameter("roomNumber");
             String checkInDate = request.getParameter("checkInDate");  
-            String checkOutDate = request.getParameter("checkOutDate");   
-            String roomNumber = request.getParameter("roomNumber");   
-             dao.register(customerId, roomType, checkInDate,checkOutDate,roomNumber);
+            String checkOutDate = request.getParameter("checkOutDate");
+             dao.bookings(customerId,roomId,name, roomType, roomNumber, checkInDate, checkOutDate);
             request.getRequestDispatcher("Home.jsp").forward(request, response);
 
         } catch (Exception e) {

@@ -1,6 +1,7 @@
 package controller;
 
 
+import Model.Account;
 import dal.AccountDAO;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.Cookie;
@@ -46,13 +47,19 @@ public class Login extends HttpServlet{
             resp.addCookie(cr);
        
         AccountDAO accountDAO = new AccountDAO();
-        boolean check = accountDAO.checkAccount(email, password);
-        if (check) {
+        Account a = accountDAO.checkAccountt(email, password);
+        if(a!=null){
             HttpSession session = req.getSession();
-            session.setAttribute("email", email);
-            session.setAttribute("password",password);
+            session.setAttribute("account", a);
             req.getRequestDispatcher("/Home.jsp").forward(req, resp);
         }
+//        boolean check = accountDAO.checkAccount(email, password);
+//        if (check) {
+//            HttpSession session = req.getSession();
+//            session.setAttribute("email", email);
+//            session.setAttribute("password",password);
+//            req.getRequestDispatcher("/Home.jsp").forward(req, resp);
+//        }
         resp.sendRedirect(req.getContextPath() + "/login.jsp");
     }
 

@@ -4,9 +4,11 @@
  */
 package dal;
 
+import Model.Account;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 /**
@@ -52,6 +54,30 @@ public class AccountDAO extends DBContext {
         }
         return false;
     }
+    public Account checkAccountt(String email, String password) {
+        try {
+            String strSelect = "SELECT [id]\n"
+                    + "      ,[name]\n"
+                    + "      ,[email]\n"
+                    + "      ,[password]\n"
+                    + "      ,[phone]\n"
+                    + "      ,[address]\n"
+                    + "  FROM [dbo].[customers]\n"
+                    + "  where email = ? and [password] = ?";
+
+            pstm = cnn.prepareStatement(strSelect);
+            pstm.setString(1, email);
+            pstm.setString(2, password);
+            rs = pstm.executeQuery();
+            if (rs.next()) {
+                Account a = new Account(rs.getInt("id"),rs.getString("name"), rs.getString("email"), rs.getString("password"), rs.getString("phone"), rs.getString("address"));
+                return a;
+            }
+        } catch (SQLException e) {
+            System.out.println("checkAccount:" + e.getMessage());
+        }
+        return null;
+    }
     
     
      public boolean register(String name,String email, String password,String phone, String address) {
@@ -68,6 +94,17 @@ public class AccountDAO extends DBContext {
         } catch (Exception e) {
             return false;
         }
+    }
+     
+     public static void main(String[] args) {
+        AccountDAO aDao = new AccountDAO();
+        String email = "truongbq@gmail.com";
+        String pass = "12345";
+        Account a = new Account();
+        a.setEmail(email);
+        a.setPassword(pass);
+        aDao.checkAccountt(email, pass);
+         System.out.println(a);
     }
     
 }

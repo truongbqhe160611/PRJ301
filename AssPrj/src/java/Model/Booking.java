@@ -12,22 +12,25 @@ import java.sql.Date;
  */
     public class Booking {
     private int customerId;
+    private int roomId;           
+    private String name;
     private String roomType;
+    private int roomNumber;
     private Date checkInDate;
     private Date checkOutDate;
-    private int roomNumber;    
 
-
-    // constructor
-    public Booking(int id, int customerId, String roomType, Date checkInDate, Date checkOutDate, int roomNumber) {       
-        this.customerId = customerId;
-        this.roomType = roomType;
-        this.checkInDate = checkInDate;
-        this.checkOutDate = checkOutDate;
-        this.roomNumber = roomNumber;            
+    public Booking() {
     }
 
-    // getters and setters
+    public Booking(int customerId, int roomId, String name, String roomType, int roomNumber, Date checkInDate, Date checkOutDate) {
+        this.customerId = customerId;
+        this.roomId = roomId;
+        this.name = name;
+        this.roomType = roomType;
+        this.roomNumber = roomNumber;
+        this.checkInDate = checkInDate;
+        this.checkOutDate = checkOutDate;
+    }
 
     public int getCustomerId() {
         return customerId;
@@ -36,8 +39,37 @@ import java.sql.Date;
     public void setCustomerId(int customerId) {
         this.customerId = customerId;
     }
-        public void setRoomType(String roomType) {
+
+    public int getRoomId() {
+        return roomId;
+    }
+
+    public void setRoomId(int roomId) {
+        this.roomId = roomId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getRoomType() {
+        return roomType;
+    }
+
+    public void setRoomType(String roomType) {
         this.roomType = roomType;
+    }
+
+    public int getRoomNumber() {
+        return roomNumber;
+    }
+
+    public void setRoomNumber(int roomNumber) {
+        this.roomNumber = roomNumber;
     }
 
     public Date getCheckInDate() {
@@ -56,15 +88,7 @@ import java.sql.Date;
         this.checkOutDate = checkOutDate;
     }
 
-    public int getRoomNumber() {
-        return roomNumber;
-    }
 
-    public void setRoomNumber(int roomNumber) {
-        this.roomNumber = roomNumber;
-    }
 
-    public String getRoomType() {
-        return roomType;
-    }
+   
 }
