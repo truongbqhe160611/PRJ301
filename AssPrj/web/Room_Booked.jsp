@@ -13,7 +13,7 @@
         <title>JSP Page</title>
         <link rel="stylesheet" href="css/Room_Booked.css">
     </head>
-    <body style="background: url(css/img/room_booking.jpg) no-repeat;">
+    <body >
         <header>
             <h2 class="logo">Room Booked</h2>
             <nav class="navigation">
@@ -23,38 +23,40 @@
                 <a href="Room_VIP.jsp">Room VIP</a>               
             </nav>
         </header>
-        <div class="room-details">
-            <div class="booking-details">
-                <h3>Booking Information</h3>
-                <table>
-                    <tr>                      
-                        <th>customer_id</th>
-                        <th>room_id</th>
-                        <th>name</th>
-                        <th>room_type</th>
-                        <th>room_number</th>
-                        <th>check_in</th>
-                        <th>check_out</th>
-                    </tr>
-                    <c:forEach begin="1" end="5" var="x">
-                        <tr>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>truong</td>
-                            <td>single</td>
-                            <td>101</td>
-                            <td>2023-03-12</td>
-                            <td>2023-03-14</td>
-                            <td>
-                                <a href="#">Update</a>
-                                <a href="#">Delete</a>
-                            </td>
+        <section>
+            <div class="room-details">
+                <div class="booking-details">
+                    <h3>Booking Information</h3>
+                    <table>
+                        <tr>                      
+                            <th>customer_id</th>
+                            <th>room_id</th>
+                            <th>name</th>
+                            <th>room_type</th>
+                            <th>room_number</th>
+                            <th>check_in</th>
+                            <th>check_out</th>
                         </tr>
-                        
+                        <c:forEach begin="1" end="5" var="x">
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>truong</td>
+                                <td>single</td>
+                                <td>101</td>
+                                <td>2023-03-12</td>
+                                <td>2023-03-14</td>
+                                <td>
+                                    <a href="#">Update</a>
+                                    <a href="#">Delete</a>
+                                </td>
+                            </tr>
+
                         </c:forEach>
-                    </tr>                 
-                </table>
+                        </tr>                 
+                    </table>
+                </div>
             </div>
-        </div>
+        </section>
     </body>
 </html>

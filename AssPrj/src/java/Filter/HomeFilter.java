@@ -118,7 +118,7 @@ public class HomeFilter implements Filter {
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse res = (HttpServletResponse) response;
         HttpSession session = req.getSession();
-        if (session.getAttribute("email") == null) {
+        if (session.getAttribute("account") == null) {
             req.getRequestDispatcher("login.jsp").forward(request, response);
         }
 
