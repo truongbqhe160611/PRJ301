@@ -1,12 +1,12 @@
 /*
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
-
- 
-    Created on : Mar 14, 2023, 10:58:29 PM
-    Author     : tr498
-
 */
+/* 
+    Created on : Mar 15, 2023, 11:01:56 PM
+    Author     : tr498
+*/
+
 *{
     margin: 0;
     padding: 0;
@@ -102,6 +102,7 @@ header{
     align-items: center;
     margin-top: 150px;
     margin-bottom: 100px;
+    margin-left: -130px;
 
 }
 .form{
@@ -114,10 +115,11 @@ label {
   margin-bottom: 5px;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="address"] {
+input[type="name"],
+input[type="room type"],
+input[type="room number"],
+input[type="check in"],
+input[type="check out"]{
   border: 1px solid #ccc;
     border-radius: 3px;
     display: block;
@@ -125,6 +127,21 @@ input[type="address"] {
     margin-bottom: 10px;
     padding: 5px;
     width: 160%;
+}
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="date"], select {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 120%;
 }
 
 input[type="submit"] {
@@ -140,4 +157,3 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #3e8e41;
 }
-

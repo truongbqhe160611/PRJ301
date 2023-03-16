@@ -10,6 +10,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -57,6 +59,7 @@ public class AccountDAO extends DBContext {
     public Account checkAccountt(String email, String password) {
         try {
             String strSelect = "SELECT [id]\n"
+                    + "      ,[isAdmin]\n"
                     + "      ,[name]\n"
                     + "      ,[email]\n"
                     + "      ,[password]\n"
@@ -70,7 +73,7 @@ public class AccountDAO extends DBContext {
             pstm.setString(2, password);
             rs = pstm.executeQuery();
             if (rs.next()) {
-                Account a = new Account(rs.getInt("id"),rs.getString("name"), rs.getString("email"), rs.getString("password"), rs.getString("phone"), rs.getString("address"));
+                Account a = new Account(rs.getInt("id"),rs.getInt("isAdmin"),rs.getString("name"), rs.getString("email"), rs.getString("password"), rs.getString("phone"), rs.getString("address"));
                 return a;
             }
         } catch (SQLException e) {
@@ -81,8 +84,8 @@ public class AccountDAO extends DBContext {
     
     
      public boolean register(String name,String email, String password,String phone, String address) {
-        String sql = "INSERT INTO [dbo].[customers]([name],[email],[password],[phone],[address])\n"
-                + "     VALUES(?,?,?,?,?)";
+        String sql = "INSERT INTO [dbo].[customers]([isAdmin],[name],[email],[password],[phone],[address])\n"
+                + "     VALUES(0,?,?,?,?,?)";
         try {
             pstm = cnn.prepareStatement(sql);
             pstm.setString(1, name);
@@ -106,5 +109,26 @@ public class AccountDAO extends DBContext {
         aDao.checkAccountt(email, pass);
          System.out.println(a);
     }
-    
+        public List<Account> getAllAccount() {
+        List<Account> Acc = new ArrayList<>();
+        try {
+            String str = "SELECT * FROM customers";
+            pstm = cnn.prepareStatement(str);
+            rs = pstm.executeQuery();
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                int isAdmin = rs.getInt("isAdmin");
+                String name = rs.getString("name");
+                String email = rs.getString("email");
+                String password = rs.getString("password");
+                String phone = rs.getString("phone");
+                String address = rs.getString("address");
+                Account Account = new Account(id, isAdmin, name, email, password, phone, address);
+                Acc.add(Account);
+            }
+        } catch (Exception e) {
+            System.out.println("getListAccount" + e.getMessage());
+        }
+        return Acc;
+    }
 }

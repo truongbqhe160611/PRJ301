@@ -23,6 +23,7 @@
                 <a href="Room_VIP.jsp">Room VIP</a>               
             </nav>
         </header>
+
         <section>
             <div class="room-details">
                 <div class="booking-details">
@@ -37,18 +38,21 @@
                             <th>check_in</th>
                             <th>check_out</th>
                         </tr>
-                        <c:forEach begin="1" end="5" var="x">
+                        <c:forEach items="${booking}" var="x">
                             <tr>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>truong</td>
-                                <td>single</td>
-                                <td>101</td>
-                                <td>2023-03-12</td>
-                                <td>2023-03-14</td>
+                                <td>${x.customerId}</td>
+                                <td>${x.roomId}</td>
+                                <td>${x.name}</td>
+                                <td>${x.roomType}</td>
+                                <td>${x.roomNumber}</td>
+                                <td>${x.checkInDate}</td>
+                                <td>${x.checkOutDate}</td>
                                 <td>
-                                    <a href="#">Update</a>
-                                    <a href="#">Delete</a>
+                                    <c:if test="${sessionScope.account.getIsAdmin() == 1}">
+                                        <a href="updatebooked?scustomerId=${x.customerId}">Update</a>
+                                        <a href="#" onclick="showMess(${x.customerId})">Delete</a>
+                                    </c:if>
+
                                 </td>
                             </tr>
 
@@ -59,4 +63,12 @@
             </div>
         </section>
     </body>
+    <script>
+        function showMess(customerId) {
+            var option = confirm('Are you sure to DELETE!!!');
+            if (option === true) {
+                window.location.href = 'deletebooked?scustomerId' + customerId;
+            }
+        }
+    </script>
 </html>

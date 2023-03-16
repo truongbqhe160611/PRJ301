@@ -14,7 +14,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     font-family: 'Poppins', sans-serif;
 }
 header{
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;

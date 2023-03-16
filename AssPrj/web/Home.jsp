@@ -69,18 +69,21 @@
           <p>&copy; 2023 Hotel Management. All rights reserved.</p>
         </footer>
       </body>-->
-    <body>     
-        <header>
-            <h2 class="logo">Logo</h2>
-            <nav class="navigation">
-                <a href="Home.jsp">Home</a>
-                <a href="Room_Booked.jsp">Room Booked</a>
-                <a href="Food.jsp">Services</a>              
-                <a href="AccountInfor.jsp">Account</a>
-                <a href="login.jsp">Log out</a>
-            </nav>
-        </header>
+    <body>            
         <main>
+            <header>
+                <h2 class="logo">Logo</h2>
+                <nav class="navigation">
+                    <a href="Home.jsp">Home</a>
+                    <a href="loadbooked">Room Booked</a>
+                    <a href="Food.jsp">Services</a> 
+                    <c:if test="${sessionScope.account.getIsAdmin() == 1}">
+                       <a href="loadaccount">List Account</a>  
+                    </c:if>
+                    <a href="AccountInfor.jsp">Account</a>
+                    <a href="login.jsp">Log out</a>
+                </nav>
+            </header>
             <section class="hero">
                 <h1>Welcome to Our Hotel</h1>
                 <p>Experience luxury and comfort at our hotel.</p>

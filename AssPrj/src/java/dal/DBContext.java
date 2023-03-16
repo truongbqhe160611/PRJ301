@@ -12,7 +12,7 @@ import java.util.logging.Logger;
  */
 /**
  *
- * @author FPT University - PRJ301
+ * @author  tr498
  */
 public class DBContext {
 

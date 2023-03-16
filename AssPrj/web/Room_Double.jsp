@@ -30,9 +30,10 @@
                     <div style="text-align: left">           
                         <section id="Room201">
                             <h2>Room201 ID:4</h2>
+                        </section>
                             <p class="room-type">Room Type: Double</p>
                             <p class="room-price">Price: $200/night</p>   
-                        </section>
+                        
                     </div>
                     <div class="room-images">
                         <img src="css/img/doi1.jpg" alt="Double Room Image 1" class="room-img">
@@ -50,16 +51,7 @@
                         <li>Desk and chair</li>
                         <li>Hair dryer</li>
                     </ul>
-                    <div style="text-align: left">
-                        <h3>Additional Information</h3>
-                        <p>We offer a complimentary breakfast buffet each morning, as well as free parking for guests. Check-in is at 3:00pm and check-out is at 11:00am.</p>
-                        <ul class="room-policies">
-                            <li>No smoking</li>
-                            <li>No pets allowed</li>
-                            <li>Maximum occupancy: 4 people</li>
-                        </ul>
-                    </div>
-                    <a href="Room_Booking.jsp"><input style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer" type="submit" value="Book Room"></a>
+                    <a href="Room_Booking.jsp"><input style="background-color: #fff;color: #0b0b0b;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer" type="submit" value="Book Room"></a>
 
                 </div>
                 <div class="room-details">  
@@ -67,9 +59,10 @@
                     <div style="text-align: left">       
                         <section id="Room202">
                             <h2>Room202 ID:5</h2>
+                        </section>
                             <p class="room-type">Room Type: Double</p>
                             <p class="room-price">Price: $200/night</p>
-                        </section>
+                        
                     </div>
 
                     <div class="room-images">
@@ -87,17 +80,8 @@
                         <li>Mini fridge</li>
                         <li>Desk and chair</li>
                         <li>Hair dryer</li>
-                    </ul>
-                    <div style="text-align: left">
-                        <h3>Additional Information</h3>
-                        <p>We offer a complimentary breakfast buffet each morning, as well as free parking for guests. Check-in is at 3:00pm and check-out is at 11:00am.</p>
-                        <ul class="room-policies">
-                            <li>No smoking</li>
-                            <li>No pets allowed</li>
-                            <li>Maximum occupancy: 4 people</li>
-                        </ul>
-                    </div>
-                    <a href="Room_Booking.jsp"><input style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer" type="submit" value="Book Room"></a>       
+                    </ul>                    
+                    <a href="Room_Booking.jsp"><input style="background-color: #fff;color: #0b0b0b;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer" type="submit" value="Book Room"></a>       
 
                 </div>        
                 <div class="room-details">            
@@ -126,16 +110,7 @@
                         <li>Desk and chair</li>
                         <li>Hair dryer</li>
                     </ul>
-                    <div style="text-align: left">
-                        <h3>Additional Information</h3>
-                        <p>We offer a complimentary breakfast buffet each morning, as well as free parking for guests. Check-in is at 3:00pm and check-out is at 11:00am.</p>
-                        <ul class="room-policies">
-                            <li>No smoking</li>
-                            <li>No pets allowed</li>
-                            <li>Maximum occupancy: 4 people</li>
-                        </ul>
-                    </div>
-                    <a href="Room_Booking.jsp"><input style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer" type="submit" value="Book Room"></a>
+                    <a href="Room_Booking.jsp"><input style="background-color: #fff;color: #0b0b0b;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer" type="submit" value="Book Room"></a>
                 </div>   
             </div>
         </main>  

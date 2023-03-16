@@ -34,8 +34,8 @@
                     <input type="tel" id="phone" name="phone" value="${sessionScope.account.phone}"><br><br>
 
                     <label for="address">Address:</label>
-                    <textarea id="address" name="address">${sessionScope.account.address}</textarea><br><br>
-
+                    <input type="address" id="address" name="address" value="${sessionScope.account.address}"><br><br>
+       
                     <button style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer">Edit Account Information</button>
                 </form>   
             </div>
