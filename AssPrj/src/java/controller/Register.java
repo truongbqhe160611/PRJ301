@@ -4,6 +4,7 @@
  */
 package controller;
 
+import Model.Account;
 import dal.AccountDAO;
 import java.io.IOException;
 import jakarta.servlet.ServletException;
@@ -29,11 +30,19 @@ public class Register extends HttpServlet {
             String email = request.getParameter("email");
             String password = request.getParameter("password");  
             String phone = request.getParameter("phone");   
-            String address = request.getParameter("address");          
-            dao.register(name, email, password,phone,address);            
-            request.getRequestDispatcher("login.jsp").forward(request, response);
+            String address = request.getParameter("address");  
+            Account a = dao.checkAccounttByEmail(email);
+            if (a != null) {
+                String ms = "Email is existed";
+                request.setAttribute("ms", ms);
+                request.getRequestDispatcher("Register.jsp").forward(request, response);
+            } else {
+                dao.register(name, email, password, phone, address);
+                request.getRequestDispatcher("login.jsp").forward(request, response);
+            }
 
-        } catch (Exception e) {
+        } catch (NumberFormatException e) {
+            System.out.println(e);
         }
     }
 

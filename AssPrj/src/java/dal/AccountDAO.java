@@ -18,6 +18,7 @@ import java.util.List;
  * @author tr498
  */
 public class AccountDAO extends DBContext {
+
     Connection cnn; //Dùng để kết nối DB
     Statement stm;//Thực thi các câu lệnh SQL
     PreparedStatement pstm;
@@ -51,11 +52,12 @@ public class AccountDAO extends DBContext {
             while (rs.next()) {
                 return true;
             }
-        } catch (Exception e) {
+        } catch (SQLException e) {
             System.out.println("checkAccount:" + e.getMessage());
         }
         return false;
     }
+
     public Account checkAccountt(String email, String password) {
         try {
             String strSelect = "SELECT [id]\n"
@@ -73,7 +75,7 @@ public class AccountDAO extends DBContext {
             pstm.setString(2, password);
             rs = pstm.executeQuery();
             if (rs.next()) {
-                Account a = new Account(rs.getInt("id"),rs.getInt("isAdmin"),rs.getString("name"), rs.getString("email"), rs.getString("password"), rs.getString("phone"), rs.getString("address"));
+                Account a = new Account(rs.getInt("id"), rs.getInt("isAdmin"), rs.getString("name"), rs.getString("email"), rs.getString("password"), rs.getString("phone"), rs.getString("address"));
                 return a;
             }
         } catch (SQLException e) {
@@ -81,9 +83,33 @@ public class AccountDAO extends DBContext {
         }
         return null;
     }
-    
-    
-     public boolean register(String name,String email, String password,String phone, String address) {
+
+    public Account checkAccounttByEmail(String email) {
+        try {
+            String strSelect = "SELECT [id]\n"
+                    + "      ,[isAdmin]\n"
+                    + "      ,[name]\n"
+                    + "      ,[email]\n"
+                    + "      ,[password]\n"
+                    + "      ,[phone]\n"
+                    + "      ,[address]\n"
+                    + "  FROM [dbo].[customers]\n"
+                    + "  where email = ?";
+
+            pstm = cnn.prepareStatement(strSelect);
+            pstm.setString(1, email);
+            rs = pstm.executeQuery();
+            if (rs.next()) {
+                Account a = new Account(rs.getInt("id"), rs.getInt("isAdmin"), rs.getString("name"), rs.getString("email"), rs.getString("password"), rs.getString("phone"), rs.getString("address"));
+                return a;
+            }
+        } catch (SQLException e) {
+            System.out.println("checkAccount:" + e.getMessage());
+        }
+        return null;
+    }
+
+    public boolean register(String name, String email, String password, String phone, String address) {
         String sql = "INSERT INTO [dbo].[customers]([isAdmin],[name],[email],[password],[phone],[address])\n"
                 + "     VALUES(0,?,?,?,?,?)";
         try {
@@ -91,25 +117,15 @@ public class AccountDAO extends DBContext {
             pstm.setString(1, name);
             pstm.setString(2, email);
             pstm.setString(3, password);
-            pstm.setString(4, phone);   
-            pstm.setString(5, address); 
+            pstm.setString(4, phone);
+            pstm.setString(5, address);
             return pstm.executeUpdate() == 1;
-        } catch (Exception e) {
+        } catch (SQLException e) {
             return false;
         }
     }
-     
-     public static void main(String[] args) {
-        AccountDAO aDao = new AccountDAO();
-        String email = "truongbq@gmail.com";
-        String pass = "12345";
-        Account a = new Account();
-        a.setEmail(email);
-        a.setPassword(pass);
-        aDao.checkAccountt(email, pass);
-         System.out.println(a);
-    }
-        public List<Account> getAllAccount() {
+
+    public List<Account> getAllAccount() {
         List<Account> Acc = new ArrayList<>();
         try {
             String str = "SELECT * FROM customers";
@@ -126,9 +142,74 @@ public class AccountDAO extends DBContext {
                 Account Account = new Account(id, isAdmin, name, email, password, phone, address);
                 Acc.add(Account);
             }
-        } catch (Exception e) {
+        } catch (SQLException e) {
             System.out.println("getListAccount" + e.getMessage());
         }
         return Acc;
     }
+
+    public void deleteBooked(String id) {
+        String sql = "delete from customers \n"
+                + "where id = ?";
+        try {
+            cnn = super.connection;
+            pstm = cnn.prepareStatement(sql);
+            pstm.setString(1, id);
+            pstm.executeUpdate();
+        } catch (Exception e) {
+        }
+    }
+  public Account getCustomerId(String customerId) {
+        String sql = "select *from customers \n"
+                + "where customer_id = ?";
+        try {
+            cnn = super.connection;
+            pstm = cnn.prepareStatement(sql);
+            pstm.setString(1, customerId);
+            rs = pstm.executeQuery();
+            while(rs.next()){
+                return new Account(rs.getInt(1),
+                        rs.getInt(2),
+                        rs.getString(3),
+                        rs.getString(4),
+                        rs.getString(5),
+                        rs.getString(6),
+                        rs.getString(7));
+            }
+        }catch(SQLException e){
+    }
+        return null;
+
+}
+    public void updateAccount(int id ,String name, String email, String password, String phone, String address) {
+        String sql = " update customers \n"
+                + "set {name} = ?, \n"
+                + " email = ?, \n"
+                + "password =?, \n"
+                + "phone = ?, \n"
+                + "address =? \n"
+                + "where id = ?";
+        try {
+            cnn = super.connection;
+            pstm = cnn.prepareStatement(sql);
+            pstm.setString(1, name);
+            pstm.setString(2, email);
+            pstm.setString(3, password);
+            pstm.setString(4, phone);
+            pstm.setString(5, address);
+            pstm.setInt(6, id);
+            pstm.executeUpdate();
+        } catch (SQLException e) {
+
+        }
+    }
+
+    public static void main(String[] args) {
+        AccountDAO ad = new AccountDAO();
+        List<Account> l = ad.getAllAccount();
+        for (Account account : l) {
+            System.out.println(account);
+        }
+    }
+
 }

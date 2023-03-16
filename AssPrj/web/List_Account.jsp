@@ -3,7 +3,7 @@
     Created on : Mar 16, 2023, 1:10:21 AM
     Author     : tr498
 --%>
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -18,11 +18,10 @@
             <nav class="navigation">
                 <a href="Home.jsp">Home</a>
                 <a href="loadbooked"">Room Booked</a>
-                <a href="Room_Double.jsp">List Account</a>
-                <a href="Room_VIP.jsp">Room VIP</a>               
+                <a href="loadaccount">List Account</a>
+                <a href="login.jsp">Log Out</a>               
             </nav>
         </header>
-
         <section>
             <div class="room-details">
                 <div class="booking-details">
@@ -35,29 +34,30 @@
                             <th>phone</th>
                             <th>address</th>
                         </tr>
-                        <c:forEach items="${Account}" var="x">
-                            <tr>
-                                <td>${x.id}</td>
-                                <td>${x.isAdmin}</td>
+                        <c:forEach items="${requestScope.Account}" var="x">
+                            <tr>   
                                 <td>${x.name}</td>
                                 <td>${x.email}</td>
                                 <td>${x.password}</td>
                                 <td>${x.phone}</td>
                                 <td>${x.address}</td>
-                                <td>                                                                      
-                            <c:if test="${sessionScope.account.getIsAdmin() == 1}">
-                                <a href="updatebooked?scustomerId=${x.customerId}">Update</a>
-                                <a href="#" onclick="showMess(${x.customerId})">Delete</a>
-                            </c:if>
+                            <td>
+                                <a href="#">Update</a>
+                                <a href="#" onclick="showMess(${x.id})">Delete</a>
                             </td>
                             </tr>
-
-                        </c:forEach>
-                        </tr>                 
+                        </c:forEach>                
                     </table>
                 </div>
             </div>
-        </section>
-    </body>
+        </section>       
 </body>
+    <script>
+        function showMess(id) {
+            var option = confirm('Are you sure to DELETE!!!');
+            if (option === true) {
+                window.location.href = 'deleteaccount?sid=' + id;
+            }
+        }
+    </script>
 </html>

@@ -30,8 +30,6 @@
                     <h3>Booking Information</h3>
                     <table>
                         <tr>                      
-                            <th>customer_id</th>
-                            <th>room_id</th>
                             <th>name</th>
                             <th>room_type</th>
                             <th>room_number</th>
@@ -67,7 +65,7 @@
         function showMess(customerId) {
             var option = confirm('Are you sure to DELETE!!!');
             if (option === true) {
-                window.location.href = 'deletebooked?scustomerId' + customerId;
+                window.location.href = 'deletebooked?scustomerId=' + customerId;
             }
         }
     </script>

@@ -3,7 +3,7 @@
     Created on : Mar 3, 2023, 1:35:27 AM
     Author     : tr498
 --%>
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -76,12 +76,14 @@
                 <nav class="navigation">
                     <a href="Home.jsp">Home</a>
                     <a href="loadbooked">Room Booked</a>
-                    <a href="Food.jsp">Services</a> 
-                    <c:if test="${sessionScope.account.getIsAdmin() == 1}">
-                       <a href="loadaccount">List Account</a>  
+                    <c:if test="${sessionScope.account.isAdmin == 0}">
+                        <a href="Food.jsp">Services</a> 
+                    </c:if>
+                    <c:if test="${sessionScope.account.isAdmin == 1}">
+                        <a href="loadaccount">List Account</a>  
                     </c:if>
                     <a href="AccountInfor.jsp">Account</a>
-                    <a href="login.jsp">Log out</a>
+                    <a href="login.jsp">Log Out</a>
                 </nav>
             </header>
             <section class="hero">

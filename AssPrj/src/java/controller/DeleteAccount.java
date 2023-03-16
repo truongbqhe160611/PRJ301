@@ -5,7 +5,6 @@
 
 package controller;
 
-import Model.Account;
 import dal.AccountDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -18,7 +17,7 @@ import jakarta.servlet.http.HttpServletResponse;
  *
  * @author tr498
  */
-public class UpdateAccount extends HttpServlet {
+public class DeleteAccount extends HttpServlet {
    
     /** 
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
@@ -35,10 +34,10 @@ public class UpdateAccount extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet UpdateAccount</title>");  
+            out.println("<title>Servlet DeleteAccount</title>");  
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet UpdateAccount at " + request.getContextPath () + "</h1>");
+            out.println("<h1>Servlet DeleteAccount at " + request.getContextPath () + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -55,13 +54,10 @@ public class UpdateAccount extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-//        processRequest(request, response);
-      String customerId = request.getParameter("customerId");
-        AccountDAO dao = new AccountDAO();
-        Account a = dao.getCustomerId(customerId);
-        request.setAttribute("acc", a);
-        request.getRequestDispatcher("Update_Account.jsp").forward(request, response);
-    }
+          String id = request.getParameter("sid");
+          AccountDAO dao =new AccountDAO();
+          dao.deleteBooked(id);
+          response.sendRedirect("loadaccount");
     } 
 
     /** 
@@ -74,16 +70,7 @@ public class UpdateAccount extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-//        processRequest(request, response);
-//       int sid = Integer.parseInt(request.getParameter("sid"));
-//       String sname = request.getParameter("name");
-//       String semail = request.getParameter("email");
-//       String spassword = request.getParameter("password");
-//       String sphone = request.getParameter("phone");
-//       String saddress = request.getParameter("address");
-//       AccountDAO dao = new AccountDAO();
-//       dao.updateAccount(sid, sname, semail, spassword, sphone, saddress);
-//       response.sendRedirect("AccountInfor.jsp");
+        processRequest(request, response);
     }
 
     /** 

@@ -41,7 +41,7 @@ public class Bookings extends HttpServlet {
             String roomNumber = request.getParameter("roomNumber");
             String checkInDate = request.getParameter("checkInDate");  
             String checkOutDate = request.getParameter("checkOutDate");
-             dao.bookings(customerId,roomId,name, roomType, roomNumber, checkInDate, checkOutDate);
+            dao.bookings(customerId,roomId,name, roomType, roomNumber, checkInDate, checkOutDate);
             request.getRequestDispatcher("Home.jsp").forward(request, response);
 
         } catch (Exception e) {

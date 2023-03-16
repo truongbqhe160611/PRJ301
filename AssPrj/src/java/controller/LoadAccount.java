@@ -57,8 +57,7 @@ public class LoadAccount extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
         AccountDAO dao = new AccountDAO();
-        List<Account> Acc = dao.getAllAccount();
-        
+        List<Account> Acc = dao.getAllAccount();        
         request.setAttribute("Account", Acc);
         request.getRequestDispatcher("List_Account.jsp").forward(request, response);
     } 

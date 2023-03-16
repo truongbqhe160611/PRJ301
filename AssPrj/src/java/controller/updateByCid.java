@@ -2,7 +2,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
-
 package controller;
 
 import Model.Booking;
@@ -13,35 +12,39 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import java.sql.Date;
 
 /**
  *
  * @author tr498
  */
-public class UpdateBooked extends HttpServlet {
-   
-    /** 
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+public class updateByCid extends HttpServlet {
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-    throws ServletException, IOException {
+            throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            int cid = Integer.parseInt(request.getParameter("scustomerId"));
+        try ( PrintWriter out = response.getWriter()) {
             BookingDAO bd = new BookingDAO();
-            Booking b = bd.getBookingByCid(cid);
-            request.setAttribute("bUpdate", b);
-            request.getRequestDispatcher("Update_Booked.jsp").forward(request, response);
+            String name = request.getParameter("name");
+            String roomType = request.getParameter("roomType");
+            int roomNumber = Integer.parseInt(request.getParameter("roomNumber"));
+            Date checkInDate = Date.valueOf(request.getParameter("checkInDate"));
+            Date checkOutDate = Date.valueOf(request.getParameter("checkOutDate"));
+            Booking b = new Booking();
+            b.setName(name);
+            b.setRoomType(roomType);
+            b.setRoomNumber(roomNumber);
+            b.setCheckInDate(checkInDate);
+            b.setCheckOutDate(checkOutDate);
+            bd.update(b);
+            request.getRequestDispatcher("Home.jsp").forward(request, response);
         }
-    } 
+    }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /** 
+    /**
      * Handles the HTTP <code>GET</code> method.
+     *
      * @param request servlet request
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
@@ -49,17 +52,13 @@ public class UpdateBooked extends HttpServlet {
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-    throws ServletException, IOException {
+            throws ServletException, IOException {
         processRequest(request, response);
-//          String customerId = request.getParameter("scustomerId");
-//          BookingDAO dao = new BookingDAO();
-//          Booking b = dao.getCustomerId(customerId);
-//          request.setAttribute("bu", b);
-//          request.getRequestDispatcher("Update_Booked.jsp").forward(request, response);
-    } 
+    }
 
-    /** 
+    /**
      * Handles the HTTP <code>POST</code> method.
+     *
      * @param request servlet request
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
@@ -67,12 +66,13 @@ public class UpdateBooked extends HttpServlet {
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-    throws ServletException, IOException {
+            throws ServletException, IOException {
         processRequest(request, response);
     }
 
-    /** 
+    /**
      * Returns a short description of the servlet.
+     *
      * @return a String containing servlet description
      */
     @Override

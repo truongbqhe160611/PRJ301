@@ -57,12 +57,62 @@ public class BookingDAO extends DBContext {
                 Booking booking = new Booking(customerId, roomId, name, roomType, roomNumber, checkInDate, checkOutDate);
                 bookings.add(booking);
             }
-        } catch (Exception e) {
+        } catch (SQLException e) {
             System.out.println("getListBooking" + e.getMessage());
         }
         return bookings;
     }
+    
+    public Booking getBookingByCid(int cid) {
+        String str = "SELECT [id]\n"
+                + "      ,[customer_id]\n"
+                + "      ,[room_id]\n"
+                + "      ,[name]\n"
+                + "      ,[room_type]\n"
+                + "      ,[room_number]\n"
+                + "      ,[check_in]\n"
+                + "      ,[check_out]\n"
+                + "  FROM [dbo].[bookings]\n"
+                + "  where customer_id = ?";
+        try {
+            pstm = cnn.prepareStatement(str);
+            pstm.setInt(1, cid);
+            rs = pstm.executeQuery();
+            if (rs.next()) {
+                Booking b = new Booking(rs.getInt(2), rs.getInt(3), rs.getString(4), rs.getString(5),rs.getInt(6), rs.getDate(7), rs.getDate(8));
+                return b;
+            }
+        } catch (SQLException e) {
+            System.out.println("getListBooking" + e.getMessage());
+        }
+        return null;
+    }
 
+    public void update(Booking b){
+        String sql = "UPDATE [dbo].[bookings]\n"
+                + "   SET [customer_id] = ?\n"
+                + "      ,[room_id] = ?\n"
+                + "      ,[name] = ?\n"
+                + "      ,[room_type] = ?\n"
+                + "      ,[room_number] = ?\n"
+                + "      ,[check_in] = ?\n"
+                + "      ,[check_out] = ?\n"
+                + " WHERE customer_id = ?";
+        try {
+            pstm = cnn.prepareStatement(sql);
+            pstm.setInt(1, b.getCustomerId());
+            pstm.setInt(2, b.getRoomId());
+            pstm.setString(3, b.getName());
+            pstm.setString(4, b.getRoomType());
+            pstm.setInt(5, b.getRoomNumber());
+            pstm.setDate(6, b.getCheckInDate());
+            pstm.setDate(7, b.getCheckOutDate());
+            pstm.setInt(8, b.getCustomerId());
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+    }
+    
     public boolean bookings(String customerId, String roomId, String name, String roomType, String roomNumber, String checkInDate, String checkOutDate) {
         String sql = "INSERT INTO [dbo].[bookings]([customer_id],[room_id],[name],[room_type],[room_number],[check_in],[check_out])\n"
                 + "     VALUES(?,?,?,?,?,?,?)";
@@ -93,26 +143,14 @@ public class BookingDAO extends DBContext {
         }
     }
 
-    public Booking getCustomerId(String customerId) {
-        String query = "select *from bookings \n"
-                + "where customer_id = ?";
-        try {
-            cnn = super.connection;
-            pstm = cnn.prepareStatement(query);
-            pstm.setString(1, customerId);
-            rs = pstm.executeQuery();
-            while(rs.next()){
-                return new Booking(rs.getInt(1),
-                        rs.getInt(2),
-                        rs.getString(3),
-                        rs.getString(4),
-                        rs.getInt(5),
-                        rs.getDate(6),
-                        rs.getDate(7));
-            }
-        }catch(Exception e){
+    
+    public static void main(String[] args) {
+        int cid = 1;
+        BookingDAO b = new BookingDAO();
+        Booking b1 = b.getBookingByCid(cid);
+        b1.setRoomId(2);
+        b1.setRoomNumber(102);
+        b.update(b1);
+        System.out.println(b1);
     }
-        return null;
-
-}
 }

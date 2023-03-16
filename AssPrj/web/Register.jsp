@@ -1,9 +1,5 @@
-<%-- 
-    Document   : Register
-    Created on : Mar 13, 2023, 8:46:20 PM
-    Author     : tr498
---%>
 
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -51,9 +47,10 @@
                         <div class="inputbox">
                             <ion-icon name="address"></ion-icon>
                             <input type="address" name="address" required>
-                            <label for="">Address </label>  
+                            <label for="">Address</label>  
                         </div>
-                        <a href=""><button>Register</button></a>                             
+                        <a href=""><button>Register</button></a>
+                        <h5 style="color: red ;margin: 6px; font-size: large;">${requestScope.ms}</h5>
                     </form>
                 </div>
             </div>

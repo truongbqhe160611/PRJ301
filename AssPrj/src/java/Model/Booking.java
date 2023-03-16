@@ -88,7 +88,12 @@ import java.sql.Date;
         this.checkOutDate = checkOutDate;
     }
 
+    @Override
+    public String toString() {
+        return "Booking{" + "customerId=" + customerId + ", roomId=" + roomId + ", name=" + name + ", roomType=" + roomType + ", roomNumber=" + roomNumber + ", checkInDate=" + checkInDate + ", checkOutDate=" + checkOutDate + '}';
+    }
 
+    
 
    
 }

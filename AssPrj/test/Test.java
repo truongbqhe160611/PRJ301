@@ -12,15 +12,15 @@ import java.util.List;
  *
  * @author MSI Bravo
  */
-public class Test {
-
-    public static void main(String[] args) {
-        BookingDAO dao = new BookingDAO();
-        Booking b = dao.getCustomerId("1");
-        System.out.println(b);
-        }
-        
-//        Prac s = dao.getStudentByID ("5"); 
-//        System.out.println(s);
-   
-}
+//public class Test {
+//
+//    public static void main(String[] args) {
+//        BookingDAO dao = new BookingDAO();
+//        Booking b = dao.getCustomerId("1");
+//        System.out.println(b);
+//        }
+//        
+////        Prac s = dao.getStudentByID ("5"); 
+////        System.out.println(s);
+//   
+//}
