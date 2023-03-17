@@ -10,7 +10,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Room Booked</title>
         <link rel="stylesheet" href="css/Room_Booked.css">
     </head>
     <body >
@@ -29,7 +29,11 @@
                 <div class="booking-details">
                     <h3>Booking Information</h3>
                     <table>
-                        <tr>                      
+                        <tr>  
+                            <c:if test="${sessionScope.account.getIsAdmin() == 1}">
+                                <th>customerId</th>
+                                </c:if>
+                            <th>roomId</th>
                             <th>name</th>
                             <th>room_type</th>
                             <th>room_number</th>
@@ -38,17 +42,23 @@
                         </tr>
                         <c:forEach items="${booking}" var="x">
                             <tr>
-                                <td>${x.customerId}</td>
+                                <c:if test="${sessionScope.account.getIsAdmin() == 1}">
+                                    <td>${x.customerId}</td>
+                                </c:if>
                                 <td>${x.roomId}</td>
                                 <td>${x.name}</td>
                                 <td>${x.roomType}</td>
                                 <td>${x.roomNumber}</td>
                                 <td>${x.checkInDate}</td>
                                 <td>${x.checkOutDate}</td>
-                                <td>
+                                <td style="display: flex">
                                     <c:if test="${sessionScope.account.getIsAdmin() == 1}">
-                                        <a href="updatebooked?scustomerId=${x.customerId}">Update</a>
-                                        <a href="#" onclick="showMess(${x.customerId})">Delete</a>
+                                        <div style="font-size: x-large;margin: 5px;">                                      
+                                        <a href="updatebooked?scustomerId=${x.customerId}"><ion-icon name="pencil"></ion-icon></ion-icon></a>
+                                        </div>
+                                        <div style="font-size: x-large;margin: 5px;">                                      
+                                        <a href="#" onclick="showMess(${x.customerId})"> <ion-icon name="trash"></ion-icon></ion-icon></a>
+                                        </div>
                                     </c:if>
 
                                 </td>
@@ -60,6 +70,8 @@
                 </div>
             </div>
         </section>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </body>
     <script>
         function showMess(customerId) {

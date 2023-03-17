@@ -7,7 +7,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
         <link rel="stylesheet" href="css/register.css">
-        <title>TRUONGBUI HOTEL</title>
+        <title>Register</title>
     </head>      
     <body class="container" >  
         <header>

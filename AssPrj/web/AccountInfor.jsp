@@ -5,7 +5,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Information Account</title>
         <link rel="stylesheet" href="css/AccountInfor.css">
     </head>
     <body  >
@@ -21,6 +21,7 @@
             <div class="form-box">
                 <div class="form-value">
                     <form style="margin-left: -130px;">
+                        
                         <label for="id">ID:</label>
                         <input type="text" id="id" name="id" value="${sessionScope.account.id}" readonly><br><br>
 
@@ -36,7 +37,7 @@
                         <label for="address">Address:</label>
                         <input type="address" id="address" name="address" value="${sessionScope.account.address}" readonly><br><br>
 
-                        <button style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer"> <a href="Update_Account.jsp">Edit Account Information</a></button>
+                        <button style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer"> <a href="updateaccount?scustomerId={$x.customerId}">Edit Account Information</a></button>
                     </form>   
                 </div>
             </div> 

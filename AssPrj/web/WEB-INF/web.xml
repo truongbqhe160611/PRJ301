@@ -41,10 +41,6 @@
         <servlet-class>controller.UpdateBooked</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>UpdateAccount</servlet-name>
-        <servlet-class>controller.UpdateAccount</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>LoadAccount</servlet-name>
         <servlet-class>controller.LoadAccount</servlet-class>
     </servlet>
@@ -55,6 +51,10 @@
     <servlet>
         <servlet-name>DeleteAccount</servlet-name>
         <servlet-class>controller.DeleteAccount</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateAccount</servlet-name>
+        <servlet-class>controller.UpdateAccount</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Login.</servlet-name>
@@ -81,10 +81,6 @@
         <url-pattern>/updatebooked</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>UpdateAccount</servlet-name>
-        <url-pattern>/updateaccount</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
         <servlet-name>LoadAccount</servlet-name>
         <url-pattern>/loadaccount</url-pattern>
     </servlet-mapping>
@@ -95,6 +91,10 @@
     <servlet-mapping>
         <servlet-name>DeleteAccount</servlet-name>
         <url-pattern>/deleteaccount</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateAccount</servlet-name>
+        <url-pattern>/updateaccount</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

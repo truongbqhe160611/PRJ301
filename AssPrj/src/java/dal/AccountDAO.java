@@ -128,7 +128,7 @@ public class AccountDAO extends DBContext {
     public List<Account> getAllAccount() {
         List<Account> Acc = new ArrayList<>();
         try {
-            String str = "SELECT * FROM customers";
+            String str = " select * from customers where isAdmin = 0";
             pstm = cnn.prepareStatement(str);
             rs = pstm.executeQuery();
             while (rs.next()) {
@@ -148,7 +148,21 @@ public class AccountDAO extends DBContext {
         return Acc;
     }
 
-    public void deleteBooked(String id) {
+//    public boolean checkAdmin(String email) {
+//        try {
+//            String sql = "select * from customers where email = ? and isAdmin = 1"
+//            pstm = cnn.prepareStatement(sql);
+//            pstm.setString(1, email);
+//            pstm.executeQuery();
+//            while(pstm.next()){
+//                
+//            }
+//        } catch (Exception e) 
+//        }
+
+    
+
+    public void deleteAccount(String id) {
         String sql = "delete from customers \n"
                 + "where id = ?";
         try {
@@ -159,7 +173,8 @@ public class AccountDAO extends DBContext {
         } catch (Exception e) {
         }
     }
-  public Account getCustomerId(String customerId) {
+
+    public Account getCustomerId(String customerId) {
         String sql = "select *from customers \n"
                 + "where customer_id = ?";
         try {
@@ -167,7 +182,7 @@ public class AccountDAO extends DBContext {
             pstm = cnn.prepareStatement(sql);
             pstm.setString(1, customerId);
             rs = pstm.executeQuery();
-            while(rs.next()){
+            while (rs.next()) {
                 return new Account(rs.getInt(1),
                         rs.getInt(2),
                         rs.getString(3),
@@ -176,12 +191,13 @@ public class AccountDAO extends DBContext {
                         rs.getString(6),
                         rs.getString(7));
             }
-        }catch(SQLException e){
-    }
+        } catch (SQLException e) {
+        }
         return null;
 
-}
-    public void updateAccount(int id ,String name, String email, String password, String phone, String address) {
+    }
+
+    public void updateAccount(int id, String name, String email, String password, String phone, String address) {
         String sql = " update customers \n"
                 + "set {name} = ?, \n"
                 + " email = ?, \n"
@@ -196,8 +212,7 @@ public class AccountDAO extends DBContext {
             pstm.setString(2, email);
             pstm.setString(3, password);
             pstm.setString(4, phone);
-            pstm.setString(5, address);
-            pstm.setInt(6, id);
+            pstm.setString(5, address);           
             pstm.executeUpdate();
         } catch (SQLException e) {
 

@@ -56,7 +56,7 @@ public class DeleteAccount extends HttpServlet {
     throws ServletException, IOException {
           String id = request.getParameter("sid");
           AccountDAO dao =new AccountDAO();
-          dao.deleteBooked(id);
+          dao.deleteAccount(id);
           response.sendRedirect("loadaccount");
     } 
 

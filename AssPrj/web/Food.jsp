@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Food</title>
         <link rel="stylesheet" href="css/Food.css">
     </head>
     <body style="background: url(css/img/background_nha_an.jpg);backdrop-filter:brightness(0.3);">

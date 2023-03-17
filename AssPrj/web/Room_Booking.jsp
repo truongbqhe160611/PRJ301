@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Room Booking</title>
         <link rel="stylesheet" href="css/Room_Booking.css">
     </head>
     <body class="container">
@@ -29,7 +29,7 @@
                     <h1 style="font-size: 3em;color: #fff;text-align: center;margin: 0 0 20px;">Room Booking</h1>
                     <form class="form" action="booking" method="POST">
                         <label for="customerId">CustomerId:</label>
-                        <input type="text" id="customerId" name="customerId"><br><br>
+                        <input type="text" id="customerId" name="customerId" value="${sessionScope.account.id}" readonly><br><br>
                         <label for="roomId">roomId:</label>
                         <input type="text" id="roomId" name="roomId"><br><br>
                         <label for="name">Name:</label>
