@@ -39,7 +39,7 @@
                             <th>address</th>
                         </tr>
                         
-                        <c:forEach items="${requestScope.Account}" var="x">
+                        <c:forEach items="${Account}" var="x">
                             <tr>   
                                 <td>${x.name}</td>
                                 <td>${x.email}</td>
@@ -48,7 +48,7 @@
                                 <td>${x.address}</td>                              
                                 <td style="display: flex">                                   
                                     <div style="font-size: x-large;margin: 5px;">
-                                        <a href="#"><ion-icon name="pencil"></ion-icon></ion-icon></a>
+                                        <a href="updateaccount?scustomerId=${x.id}"><ion-icon name="pencil"></ion-icon></ion-icon></a>
                                     </div>
                                     <div style="font-size: x-large;margin: 5px;">
                                         <a href="#" onclick="showMess(${x.id})"><ion-icon name="trash"></ion-icon></ion-icon></a>

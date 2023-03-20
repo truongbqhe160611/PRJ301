@@ -4,40 +4,51 @@
  */
 package controller;
 
-import Model.Booking;
-import dal.BookingDAO;
+import Model.Account;
+import dal.AccountDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import java.sql.Date;
+import jakarta.servlet.http.HttpSession;
 
 /**
  *
  * @author tr498
  */
-public class updateByCid extends HttpServlet {
+public class updateByCustomerId extends HttpServlet {
 
+    /**
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
-            BookingDAO bd = new BookingDAO();
+            AccountDAO account = new AccountDAO();
+            String id = request.getParameter("mod");
             String name = request.getParameter("name");
-            int roomId = Integer.parseInt(request.getParameter("roomId"));
-            String roomType = request.getParameter("roomType");     
-            int roomNumber = Integer.parseInt(request.getParameter("roomNumber"));
-            Date checkInDate = Date.valueOf(request.getParameter("checkInDate"));
-            Date checkOutDate = Date.valueOf(request.getParameter("checkOutDate"));
-            Booking b = new Booking(1, roomId, name, roomType, roomNumber, checkInDate, checkOutDate);
+            String email = request.getParameter("email");
+            String password = request.getParameter("password");
+            String phone = request.getParameter("phone");
+            String address = request.getParameter("address");
+            Account acc = new Account(name, email, password, phone, address);
+//            HttpSession session = request.getSession();
+//            int id = (int) session.getAttribute("cid");
 //            b.setName(name);
 //            b.setRoomType(roomType);
 //            b.setRoomNumber(roomNumber);
 //            b.setCheckInDate(checkInDate);
 //            b.setCheckOutDate(checkOutDate);
-            bd.update(b);
+            account.updateAccount(Integer.parseInt(id), acc);
             request.getRequestDispatcher("Home.jsp").forward(request, response);
         }
     }

@@ -148,20 +148,6 @@ public class AccountDAO extends DBContext {
         return Acc;
     }
 
-//    public boolean checkAdmin(String email) {
-//        try {
-//            String sql = "select * from customers where email = ? and isAdmin = 1"
-//            pstm = cnn.prepareStatement(sql);
-//            pstm.setString(1, email);
-//            pstm.executeQuery();
-//            while(pstm.next()){
-//                
-//            }
-//        } catch (Exception e) 
-//        }
-
-    
-
     public void deleteAccount(String id) {
         String sql = "delete from customers \n"
                 + "where id = ?";
@@ -174,49 +160,73 @@ public class AccountDAO extends DBContext {
         }
     }
 
-    public Account getCustomerId(String customerId) {
-        String sql = "select *from customers \n"
-                + "where customer_id = ?";
+    public Account getCustomerId(int id) {
+        String str = "SELECT [id]\n"
+                + "      ,[isAdmin]\n"
+                + "      ,[name]\n"
+                + "      ,[email]\n"
+                + "      ,[password]\n"
+                + "      ,[phone]\n"
+                + "      ,[address]\n"
+                + "  FROM [dbo].[customers]\n"
+                + "  where id = ?";
         try {
-            cnn = super.connection;
-            pstm = cnn.prepareStatement(sql);
-            pstm.setString(1, customerId);
+            pstm = cnn.prepareStatement(str);
+            pstm.setInt(1, id);
             rs = pstm.executeQuery();
-            while (rs.next()) {
-                return new Account(rs.getInt(1),
-                        rs.getInt(2),
-                        rs.getString(3),
-                        rs.getString(4),
-                        rs.getString(5),
-                        rs.getString(6),
-                        rs.getString(7));
+            if (rs.next()) {
+                Account acc = new Account(rs.getInt(1), rs.getInt(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getString(7));
+                return acc;
             }
         } catch (SQLException e) {
+            System.out.println("getListBooking" + e.getMessage());
         }
         return null;
-
     }
 
-    public void updateAccount(int id, String name, String email, String password, String phone, String address) {
-        String sql = " update customers \n"
-                + "set {name} = ?, \n"
-                + " email = ?, \n"
-                + "password =?, \n"
-                + "phone = ?, \n"
-                + "address =? \n"
-                + "where id = ?";
+    public void updateAccount(Account acc) {
+        String sql = " UPDATE [dbo].[customers] \n"
+                + "SET [id] = ?, \n"
+                + "[isAdmin] = ?\n"
+                + "[name] = ?, \n"
+                + "[email] =?, \n"
+                + "[password] = ?, \n"
+                + "[phone] =? \n"
+                + "[address] = ? \n"
+                + "where [id]";
         try {
-            cnn = super.connection;
             pstm = cnn.prepareStatement(sql);
-            pstm.setString(1, name);
-            pstm.setString(2, email);
-            pstm.setString(3, password);
-            pstm.setString(4, phone);
-            pstm.setString(5, address);           
+            pstm.setInt(1, acc.getId());
+            pstm.setInt(2, acc.getIsAdmin());
+            pstm.setString(3, acc.getName());
+            pstm.setString(4, acc.getEmail());
+            pstm.setString(5, acc.getPassword());
+            pstm.setString(6, acc.getPhone());
+            pstm.setString(7, acc.getAddress());
             pstm.executeUpdate();
         } catch (SQLException e) {
-
+            System.out.println(e);
         }
+    }
+
+    public boolean updateAccount(int id, Account acc) {
+        try {
+            String strUpdate = "  Update [customers]\n"
+                    + "  set name =?, email =?, password=?, phone=?, address=?\n"
+                    + "  where id = ?";
+            pstm = cnn.prepareStatement(strUpdate);
+            pstm.setString(1, acc.getName());
+            pstm.setString(2, acc.getEmail());
+            pstm.setString(3, acc.getPassword());
+            pstm.setString(4, acc.getPhone());
+            pstm.setString(5, acc.getAddress());
+            pstm.setInt(6, id);
+            pstm.executeUpdate();
+            return true;
+        } catch (Exception e) {
+            System.out.println("Update:" + e.getMessage());
+        }
+        return false;
     }
 
     public static void main(String[] args) {

@@ -12,6 +12,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 /**
  *
@@ -30,18 +31,15 @@ public class UpdateAccount extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try ( PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet UpdateAccount</title>");
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet UpdateAccount at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+            response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            int cid = Integer.parseInt(request.getParameter("scustomerId"));
+            AccountDAO account = new AccountDAO();
+            Account acc = account.getCustomerId(cid);
+            request.setAttribute("Aupdate", acc);
+//            HttpSession session = request.getSession();
+//            session.setAttribute("cid", Integer.parseInt(request.getParameter("scustomerId")));
+            request.getRequestDispatcher("Update_Account.jsp").forward(request, response);
         }
     }
 
@@ -57,12 +55,13 @@ public class UpdateAccount extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        processRequest(request, response);
 //        processRequest(request, response);   
-       String customerId = request.getParameter("customerId");
-        AccountDAO dao = new AccountDAO();
-        Account a = dao.getCustomerId(customerId);
-        request.setAttribute("acc", a);
-        request.getRequestDispatcher("AccountInfor.jsp").forward(request, response);
+//       String customerId = request.getParameter("customerId");
+//        AccountDAO dao = new AccountDAO();
+//        Account a = dao.getCustomerId(customerId);
+//        request.setAttribute("acc", a);
+//        request.getRequestDispatcher("AccountInfor.jsp").forward(request, response);
     }
 
 
@@ -77,17 +76,18 @@ public class UpdateAccount extends HttpServlet {
 @Override
 protected void doPost(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-        processRequest(request, response);
-       int sid = Integer.parseInt(request.getParameter("sid"));
-       String sname = request.getParameter("name");
-       String semail = request.getParameter("email");
-       String spassword = request.getParameter("password");
-       String sphone = request.getParameter("phone");
-       String saddress = request.getParameter("address");
-       AccountDAO dao = new AccountDAO();
-       dao.updateAccount(sid, sname, semail, spassword, sphone, saddress);
-       response.sendRedirect("AccountInfor.jsp");
-  
+    processRequest(request, response);
+//        processRequest(request, response);
+//       int sid = Integer.parseInt(request.getParameter("sid"));
+//       String sname = request.getParameter("name");
+//       String semail = request.getParameter("email");
+//       String spassword = request.getParameter("password");
+//       String sphone = request.getParameter("phone");
+//       String saddress = request.getParameter("address");
+//       AccountDAO dao = new AccountDAO();
+//       dao.updateAccount(sid, sname, semail, spassword, sphone, saddress);
+//       response.sendRedirect("AccountInfor.jsp");
+//  
     }
 
     /** 

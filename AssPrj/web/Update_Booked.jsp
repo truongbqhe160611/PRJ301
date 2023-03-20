@@ -10,7 +10,6 @@
     </head>
 
     <body>
-        <form>
             <header>
                 <h2 class="logo">Room Booked</h2>
                 <nav class="navigation">
@@ -25,11 +24,23 @@
                     <div class="form-value" style="margin-left: -130px;">
                         <c:set var="b" value="${requestScope.bUpdate}"/>
                         <label for="name">Name:</label>
-                        <input type="name" id="name" name="name" value="${b.name}" readonly><br><br>
+                        <input type="name" id="name" name="name" value="${b.name}" readonly><br><br> 
+                        <label for="roomNumber">RoomID:</label>
+                        <select id="roomId" name="roomId" value="${b.roomId}">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                        </select><br><br> 
                         <label for="roomType">Room Type:</label>
-                        <select id="roomType" name="roomType" value="${b.roomType}">
-                            <option value="single">Single</option>
-                            <option value="double">Double</option>
+                        <select id="roomType" name="roomType"><%--${b.roomType}--%>
+                            <option value="Single">Single</option>
+                            <option value="Double">Double</option>
                             <option value="VIP">VIP</option>
                         </select><br><br> 
                         <label for="roomNumber">Room Number:</label>
@@ -45,12 +56,12 @@
                             <option value="303">Room303</option>
                         </select><br><br> 
                         <label for="checkInDate">Check-in Date:</label>
-                        <input type="date" id="checkInDate" name="checkInDate" value="${b.checkInDate}"><br><br>
+                        <input type="date" name="checkInDate" value="${b.checkInDate}"><br><br>
 
                         <label for="checkOutDate">Check-out Date:</label>
-                        <input type="date" id="checkOutDate" name="checkOutDate" value="${b.checkOutDate}"><br><br>
+                        <input type="date" name="checkOutDate" value="${b.checkOutDate}"><br><br>
 
-                        <button style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor:pointer">Update</button>
+                        <button type="submit" style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor:pointer">Update</button>
 
                     </div>
                 </div>  

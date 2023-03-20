@@ -62,7 +62,7 @@ public class BookingDAO extends DBContext {
         }
         return bookings;
     }
-    
+
     public Booking getBookingByCid(int cid) {
         String str = "SELECT [id]\n"
                 + "      ,[customer_id]\n"
@@ -79,7 +79,7 @@ public class BookingDAO extends DBContext {
             pstm.setInt(1, cid);
             rs = pstm.executeQuery();
             if (rs.next()) {
-                Booking b = new Booking(rs.getInt(2), rs.getInt(3), rs.getString(4), rs.getString(5),rs.getInt(6), rs.getDate(7), rs.getDate(8));
+                Booking b = new Booking(rs.getInt(2), rs.getInt(3), rs.getString(4), rs.getString(5), rs.getInt(6), rs.getDate(7), rs.getDate(8));
                 return b;
             }
         } catch (SQLException e) {
@@ -88,7 +88,7 @@ public class BookingDAO extends DBContext {
         return null;
     }
 
-    public void update(Booking b){
+    public void update(Booking b) {
         String sql = "UPDATE [dbo].[bookings]\n"
                 + "   SET [customer_id] = ?\n"
                 + "      ,[room_id] = ?\n"
@@ -108,11 +108,12 @@ public class BookingDAO extends DBContext {
             pstm.setDate(6, b.getCheckInDate());
             pstm.setDate(7, b.getCheckOutDate());
             pstm.setInt(8, b.getCustomerId());
+            pstm.executeUpdate();
         } catch (SQLException e) {
             System.out.println(e);
         }
     }
-    
+
     public boolean bookings(String customerId, String roomId, String name, String roomType, String roomNumber, String checkInDate, String checkOutDate) {
         String sql = "INSERT INTO [dbo].[bookings]([customer_id],[room_id],[name],[room_type],[room_number],[check_in],[check_out])\n"
                 + "     VALUES(?,?,?,?,?,?,?)";
@@ -132,7 +133,7 @@ public class BookingDAO extends DBContext {
     }
 
     public void deleteBooked(String customerId) {
-        String sql= "delete from bookings \n"
+        String sql = "delete from bookings \n"
                 + "where customer_id = ?";
         try {
             cnn = super.connection;
@@ -143,13 +144,12 @@ public class BookingDAO extends DBContext {
         }
     }
 
-    
     public static void main(String[] args) {
         int cid = 1;
         BookingDAO b = new BookingDAO();
         Booking b1 = b.getBookingByCid(cid);
-        b1.setRoomId(2);
-        b1.setRoomNumber(102);
+        b1.setRoomId(4);
+        b1.setRoomNumber(201);
         b.update(b1);
         System.out.println(b1);
     }

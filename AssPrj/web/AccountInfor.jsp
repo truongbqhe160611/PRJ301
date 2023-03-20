@@ -18,30 +18,31 @@
                 <a href="#">${sessionScope.account.name}</a>                
             </nav>
         </header>          
-            <div class="form-box">
-                <div class="form-value">
-                    <form style="margin-left: -130px;">
-                        
-                        <label for="id">ID:</label>
-                        <input type="text" id="id" name="id" value="${sessionScope.account.id}" readonly><br><br>
+        <div class="form-box">
+            <div class="form-value">
+                <form style="margin-left: -130px;">
 
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" value="${sessionScope.account.name}" readonly><br><br>
+                    <label for="id">ID:</label>
+                    <input type="text" id="id" name="id" value="${sessionScope.account.id}" readonly><br><br>
 
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" value="${sessionScope.account.email}" readonly><br><br>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" value="${sessionScope.account.name}" readonly><br><br>
 
-                        <label for="phone">Phone:</label>
-                        <input type="tel" id="phone" name="phone" value="${sessionScope.account.phone}" readonly><br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" value="${sessionScope.account.email}" readonly><br><br>
 
-                        <label for="address">Address:</label>
-                        <input type="address" id="address" name="address" value="${sessionScope.account.address}" readonly><br><br>
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" value="${sessionScope.account.phone}" readonly><br><br>
 
-                        <button style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer"> <a href="updateaccount?scustomerId={$x.customerId}">Edit Account Information</a></button>
-                    </form>   
-                </div>
-            </div> 
-        </form>
-    </body>
+                    <label for="address">Address:</label>
+                    <input type="address" id="address" name="address" value="${sessionScope.account.address}" readonly><br><br>
+                    <c:forEach items="${requestScope.Account}" var="x">
+                        <button style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer"> <a href="updateaccount?customerId=${x.customerId}">Update</a></button>
+                    </c:forEach>
+                </form>   
+            </div>
+        </div> 
+    </form>
+</body>
 
 </html>

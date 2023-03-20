@@ -11,7 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="css/updateaccount.css">
     </head>
-        <body  >
+    <body  >
         <header>
             <h2 class="logo">Logo</h2>
             <nav class="navigation">
@@ -21,23 +21,28 @@
                 <a href="#">${sessionScope.account.name}</a>                
             </nav>
         </header>
-            <form action="updateaccount" method="post">
+        <form action="updatebycustomerid" method="post">
             <div class="form-box">
-                <div class="form-value" style="margin-left: -130px;">                               
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" value="${acc.name}"><br><br>
+                <div class="form-value" style="margin-left: -130px;">   
+                    <c:set var="acc" value="${requestScope.Aupdate}"/>
 
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" value="${acc.email}"><br><br>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" value="${Aupdate.name}"><br><br>
 
-                        <label for="phone">Phone:</label>
-                        <input type="tel" id="phone" name="phone" value="${acc.phone}"><br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" value="${Aupdate.email}"><br><br>
+                    
+                    <label for="password">password:</label>
+                    <input type="text" id="password" name="password" value="${Aupdate.password}"><br><br>
 
-                        <label for="address">Address:</label>
-                        <input type="address" id="address" name="address" value="${acc.address}"><br><br>
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" value="${Aupdate.phone}"><br><br>
 
-                        <button style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer"> <a href="updateaccount?sid={acc.customerId}">Edit Account Information</a></button>                   
-   
+                    <label for="address">Address:</label>
+                    <input type="address" id="address" name="address" value="${Aupdate.address}"><br><br>
+
+                    <button name="mod" value="${Aupdate.id}" style="background-color: #060a0e;color: #fff;border: none;padding: 10px 20px;border-radius: 5px;cursor: pointer">Update</button>                   
+
                 </div>
             </div> 
         </form>
