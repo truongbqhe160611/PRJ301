@@ -33,7 +33,7 @@
                         <label for="roomId">roomId:</label>
                         <input type="text" id="roomId" name="roomId"><br><br>
                         <label for="name">Name:</label>
-                        <input type="text" id="name" name="name"><br><br>
+                        <input type="text" id="name" name="name" value="${sessionScope.account.name}" readonly><br><br>
                         <label for="roomType">Room Type:</label>
                         <select id="roomType" name="roomType">
                             <option value="single">Single</option>

@@ -15,6 +15,9 @@
         <url-pattern>/Room_Booked.jsp</url-pattern>
         <url-pattern>/Food.jsp</url-pattern>
         <url-pattern>/AccountInfor.jsp</url-pattern>
+        <url-pattern>/Update_Account.jsp</url-pattern>
+        <url-pattern>/Update_Booked.jsp</url-pattern>
+        <url-pattern>/List_Account.jsp</url-pattern>
     </filter-mapping>
     <servlet>
         <servlet-name>Login.</servlet-name>

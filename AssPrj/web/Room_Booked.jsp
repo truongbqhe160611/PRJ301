@@ -17,10 +17,20 @@
         <header>
             <h2 class="logo">Room Booked</h2>
             <nav class="navigation">
-                <a href="Home.jsp">Home</a>
-                <a href="Room_Single.jsp">Room Single</a>
-                <a href="Room_Double.jsp">Room Double</a>
-                <a href="Room_VIP.jsp">Room VIP</a>               
+                <a href="Home.jsp">Home</a>               
+
+                <c:if test="${sessionScope.account.isAdmin == 1}">
+                    <a href="loadbooked">Room Booked</a>
+                    <a href="loadaccount">List Account</a>  
+                    <a href="AccountInfor.jsp">Account</a>
+                    <a href="login.jsp">Log Out</a>  
+                </c:if>
+                <c:if test="${sessionScope.account.isAdmin == 0}">
+                    <a href="Room_Double.jsp">Room Double</a>
+                    <a href="Room_Single.jsp">Room Single</a>
+                    <a href="Room_VIP.jsp">Room VIP</a>     
+                </c:if>
+
             </nav>
         </header>
 
@@ -54,10 +64,10 @@
                                 <td style="display: flex">
                                     <c:if test="${sessionScope.account.getIsAdmin() == 1}">
                                         <div style="font-size: x-large;margin: 5px;">                                      
-                                        <a href="updatebooked?scustomerId=${x.customerId}"><ion-icon name="pencil"></ion-icon></ion-icon></a>
+                                            <a href="updatebooked?scustomerId=${x.customerId}"><ion-icon name="pencil"></ion-icon></ion-icon></a>
                                         </div>
                                         <div style="font-size: x-large;margin: 5px;">                                      
-                                        <a href="#" onclick="showMess(${x.customerId})"> <ion-icon name="trash"></ion-icon></ion-icon></a>
+                                            <a href="#" onclick="showMess(${x.customerId})"> <ion-icon name="trash"></ion-icon></ion-icon></a>
                                         </div>
                                     </c:if>
 
@@ -74,11 +84,11 @@
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </body>
     <script>
-        function showMess(customerId) {
-            var option = confirm('Are you sure to DELETE!!!');
-            if (option === true) {
-                window.location.href = 'deletebooked?scustomerId=' + customerId;
-            }
-        }
+                                                function showMess(customerId) {
+                                                    var option = confirm('Are you sure to DELETE!!!');
+                                                    if (option === true) {
+                                                        window.location.href = 'deletebooked?scustomerId=' + customerId;
+                                                    }
+                                                }
     </script>
 </html>
